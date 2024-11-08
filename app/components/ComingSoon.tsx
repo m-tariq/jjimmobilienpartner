@@ -11,6 +11,7 @@ const ComingSoonPage = () => {
     seconds: 0,
   });
 
+  //
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
 
