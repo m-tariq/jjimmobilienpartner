@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState, FormEvent } from "react";
+import { Card, Input, Button, Progress } from "@nextui-org/react";
 
 interface TimeLeft {
   days: number;
@@ -7,6 +8,20 @@ interface TimeLeft {
   minutes: number;
   seconds: number;
 }
+
+interface CountdownBoxProps {
+  value: number;
+  label: string;
+}
+
+const CountdownBox = ({ value, label }: CountdownBoxProps) => (
+  <Card className="p-4 w-full">
+    <div className="flex flex-col items-center justify-center">
+      <span className="text-4xl font-bold text-primary">{value}</span>
+      <span className="text-sm text-gray-500 mt-1">{label}</span>
+    </div>
+  </Card>
+);
 
 export default function ComingSoon() {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
@@ -17,6 +32,7 @@ export default function ComingSoon() {
   });
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const launchDate = new Date("2024-12-31T00:00:00").getTime();
@@ -38,60 +54,95 @@ export default function ComingSoon() {
     return () => clearInterval(timer);
   }, []);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
+    // Simulate API call
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     setIsSubscribed(true);
+    setIsLoading(false);
   };
 
-  const CountdownBox = ({ value, label }: { value: number; label: string }) => (
-    <div className="bg-white p-4 rounded-lg shadow">
-      <div className="text-2xl font-bold">{value}</div>
-      <div className="text-gray-600">{label}</div>
-    </div>
-  );
+  const progressValue = (timeLeft.days / 365) * 100;
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-      <div className="text-center p-8">
-        <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-        <p className="mb-8">
-          We&apos;re working hard to bring you something amazing!
-        </p>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-white to-blue-50 p-4">
+      <Card className="max-w-3xl w-full p-6 md:p-8">
+        <div className="space-y-6">
+          {/* Header */}
+          <div className="text-center space-y-2">
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+              Coming Soon
+            </h1>
+            <p className="text-gray-600">
+              We&apos;re crafting something amazing for you
+            </p>
+          </div>
 
-        <div className="grid grid-cols-4 gap-4 mb-8">
-          <CountdownBox value={timeLeft.days} label="Days" />
-          <CountdownBox value={timeLeft.hours} label="Hours" />
-          <CountdownBox value={timeLeft.minutes} label="Minutes" />
-          <CountdownBox value={timeLeft.seconds} label="Seconds" />
+          {/* Progress */}
+          <div className="w-full px-4">
+            <Progress
+              size="lg"
+              value={progressValue}
+              className="max-w-md mx-auto"
+              color="primary"
+              showValueLabel={false}
+            />
+          </div>
+
+          {/* Countdown */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <CountdownBox value={timeLeft.days} label="Days" />
+            <CountdownBox value={timeLeft.hours} label="Hours" />
+            <CountdownBox value={timeLeft.minutes} label="Minutes" />
+            <CountdownBox value={timeLeft.seconds} label="Seconds" />
+          </div>
+
+          {/* Subscription Form */}
+          <div className="mt-8">
+            {!isSubscribed ? (
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="max-w-md mx-auto">
+                  <Input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email"
+                    variant="bordered"
+                    size="lg"
+                    classNames={{
+                      input: "text-base",
+                    }}
+                    required
+                  />
+                </div>
+                {/* <Button
+                  type="submit"
+                  color="primary"
+                  size="lg"
+                  className="w-full max-w-md mx-auto"
+                  isLoading={isLoading}
+                >
+                  Notify Me
+                </Button> */}
+              </form>
+            ) : (
+              <Card className="bg-green-50 border-green-200 p-4">
+                <p className="text-green-600 text-center">
+                  Thanks for subscribing! We&apos;ll keep you updated.
+                </p>
+              </Card>
+            )}
+          </div>
+
+          {/* Footer */}
+          <div className="text-center text-sm text-gray-500 mt-6">
+            <p>
+              Stay tuned for updates and be the first to know when we launch!
+            </p>
+          </div>
         </div>
-
-        {!isSubscribed ? (
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-            <div className="flex gap-2">
-              <input
-                type="email"
-                value={email}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  setEmail(e.target.value)
-                }
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <button
-                type="submit"
-                className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                Notify Me
-              </button>
-            </div>
-          </form>
-        ) : (
-          <p className="text-green-600">
-            Thank you for subscribing! We&apos;ll keep you updated.
-          </p>
-        )}
-      </div>
-    </section>
+      </Card>
+    </div>
   );
 }
