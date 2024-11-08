@@ -1,6 +1,9 @@
-import Image from "next/image";
-import ComingSoonPage from "./components/ComingSoon";
+import ComingSoon from "./components/ComingSoon";
 
 export default function Home() {
-  return <ComingSoonPage />;
+  return (
+    <main>
+      <ComingSoon />
+    </main>
+  );
 }

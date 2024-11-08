@@ -1,27 +1,28 @@
-"use client";
+import { useEffect, useState, FormEvent } from "react";
 
-import { useState, useEffect } from "react";
-import { Mail, Github, Linkedin, Twitter } from "lucide-react";
+interface TimeLeft {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
 
-const ComingSoonPage = () => {
-  const [timeLeft, setTimeLeft] = useState({
+const ComingSoon = () => {
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0,
   });
-
-  //
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
 
-  // Set your launch date here
-  const launchDate = new Date("2024-12-31T00:00:00");
-
   useEffect(() => {
+    const launchDate = new Date("2024-12-31T00:00:00").getTime();
+
     const timer = setInterval(() => {
       const now = new Date().getTime();
-      const difference = launchDate.getTime() - now;
+      const difference = launchDate - now;
 
       setTimeLeft({
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
@@ -36,101 +37,68 @@ const ComingSoonPage = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Add your email subscription logic here
     setIsSubscribed(true);
-    setEmail("");
   };
 
-  const TimeBox = ({ value, label }) => (
-    <div className="flex flex-col items-center p-4 bg-white/10 rounded-lg backdrop-blur-sm w-24">
-      <span className="text-4xl font-bold text-white">{value}</span>
-      <span className="text-sm text-gray-300">{label}</span>
-    </div>
-  );
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 flex flex-col items-center justify-center p-4">
-      {/* Main Content Container */}
-      <div className="max-w-4xl w-full text-center space-y-8">
-        {/* Logo or Brand Name */}
-        <h1 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-          Coming Soon
-        </h1>
-
-        {/* Subtitle */}
-        <p className="text-xl text-gray-300">
-          We're working hard to bring you something amazing. Stay tuned!
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+        <p className="mb-8">
+          We&apos;re working hard to bring you something amazing!
         </p>
 
-        {/* Countdown Timer */}
-        <div className="flex flex-wrap justify-center gap-4">
-          <TimeBox value={timeLeft.days} label="Days" />
-          <TimeBox value={timeLeft.hours} label="Hours" />
-          <TimeBox value={timeLeft.minutes} label="Minutes" />
-          <TimeBox value={timeLeft.seconds} label="Seconds" />
+        <div className="grid grid-cols-4 gap-4 mb-8">
+          <div className="bg-white p-4 rounded-lg shadow">
+            <div className="text-2xl font-bold">{timeLeft.days}</div>
+            <div className="text-gray-600">Days</div>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow">
+            <div className="text-2xl font-bold">{timeLeft.hours}</div>
+            <div className="text-gray-600">Hours</div>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow">
+            <div className="text-2xl font-bold">{timeLeft.minutes}</div>
+            <div className="text-gray-600">Minutes</div>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow">
+            <div className="text-2xl font-bold">{timeLeft.seconds}</div>
+            <div className="text-gray-600">Seconds</div>
+          </div>
         </div>
 
-        {/* Email Subscription Form */}
-        <div className="max-w-md mx-auto">
-          {!isSubscribed ? (
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row gap-2"
-            >
+        {!isSubscribed ? (
+          <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+            <div className="flex gap-2">
               <input
                 type="email"
-                placeholder="Enter your email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-grow px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm text-white placeholder-gray-400 border border-white/20 focus:outline-none focus:border-white/40"
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setEmail(e.target.value)
+                }
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
               <button
                 type="submit"
-                className="px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-white font-semibold hover:opacity-90 transition-opacity"
+                className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 Notify Me
               </button>
-            </form>
-          ) : (
-            <div className="text-green-400 font-semibold">
-              Thanks for subscribing! We'll keep you updated.
             </div>
-          )}
-        </div>
-
-        {/* Social Links */}
-        <div className="flex justify-center gap-6 pt-8">
-          <a
-            href="#"
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            <Twitter className="w-6 h-6" />
-          </a>
-          <a
-            href="#"
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            <Github className="w-6 h-6" />
-          </a>
-          <a
-            href="#"
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            <Linkedin className="w-6 h-6" />
-          </a>
-          <a
-            href="#"
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            <Mail className="w-6 h-6" />
-          </a>
-        </div>
+          </form>
+        ) : (
+          <p className="text-green-600">
+            Thank you for subscribing! We&apos;ll keep you updated.
+          </p>
+        )}
       </div>
     </div>
   );
 };
 
-export default ComingSoonPage;
+export default ComingSoon;
