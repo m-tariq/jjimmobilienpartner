@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState, FormEvent } from "react";
 
 interface TimeLeft {
@@ -76,7 +77,7 @@ const ComingSoon = () => {
               <input
                 type="email"
                 value={email}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                onChange={(e: at needs `uReact.ChangeEvent<HTMLInputElement>) =>
                   setEmail(e.target.value)
                 }
                 placeholder="Enter your email"
