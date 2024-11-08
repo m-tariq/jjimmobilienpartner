@@ -8,7 +8,7 @@ interface TimeLeft {
   seconds: number;
 }
 
-const ComingSoon = () => {
+export default function ComingSoon() {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,
@@ -40,35 +40,29 @@ const ComingSoon = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Add your email subscription logic here
     setIsSubscribed(true);
   };
 
+  const CountdownBox = ({ value, label }: { value: number; label: string }) => (
+    <div className="bg-white p-4 rounded-lg shadow">
+      <div className="text-2xl font-bold">{value}</div>
+      <div className="text-gray-600">{label}</div>
+    </div>
+  );
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-      <div className="text-center">
+    <section className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+      <div className="text-center p-8">
         <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
         <p className="mb-8">
           We&apos;re working hard to bring you something amazing!
         </p>
 
         <div className="grid grid-cols-4 gap-4 mb-8">
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="text-2xl font-bold">{timeLeft.days}</div>
-            <div className="text-gray-600">Days</div>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="text-2xl font-bold">{timeLeft.hours}</div>
-            <div className="text-gray-600">Hours</div>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="text-2xl font-bold">{timeLeft.minutes}</div>
-            <div className="text-gray-600">Minutes</div>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow">
-            <div className="text-2xl font-bold">{timeLeft.seconds}</div>
-            <div className="text-gray-600">Seconds</div>
-          </div>
+          <CountdownBox value={timeLeft.days} label="Days" />
+          <CountdownBox value={timeLeft.hours} label="Hours" />
+          <CountdownBox value={timeLeft.minutes} label="Minutes" />
+          <CountdownBox value={timeLeft.seconds} label="Seconds" />
         </div>
 
         {!isSubscribed ? (
@@ -77,7 +71,7 @@ const ComingSoon = () => {
               <input
                 type="email"
                 value={email}
-                onChange={(e: at needs `uReact.ChangeEvent<HTMLInputElement>) =>
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setEmail(e.target.value)
                 }
                 placeholder="Enter your email"
@@ -98,8 +92,6 @@ const ComingSoon = () => {
           </p>
         )}
       </div>
-    </div>
+    </section>
   );
-};
-
-export default ComingSoon;
+}
