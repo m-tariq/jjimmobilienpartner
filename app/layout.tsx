@@ -3,7 +3,9 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+// Import Font Awesome
+import "@fortawesome/fontawesome-svg-core/styles.css"; // Import the FontAwesome styles
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
