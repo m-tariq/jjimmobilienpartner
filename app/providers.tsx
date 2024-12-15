@@ -1,8 +1,14 @@
 'use client';
+
 import { useEffect } from 'react';
+
 export function BootstrapProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    require('bootstrap/dist/js/bootstrap.bundle.min.js');
+    const loadBootstrap = async () => {
+      await import('bootstrap/dist/js/bootstrap.bundle.min.js');
+    };
+    loadBootstrap();
   }, []);
+
   return <>{children}</>;
 }
