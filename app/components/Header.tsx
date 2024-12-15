@@ -4,31 +4,36 @@ import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 
+// Define types for dropdown state
+type DropdownState = {
+  leistungen: boolean;
+  ankauf: boolean;
+};
+
+type DropdownKey = keyof DropdownState;
+
 export default function Header() {
   const pathname = usePathname();
   const [isClient, setIsClient] = useState(false);
 
-  // Set isClient to true once component mounts
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  // Function to check if a path is active
   const isActive = (path: string) => {
     if (!isClient) return false;
     if (path === '/') {
       return pathname === path;
     }
-    return pathname.startsWith(path);
+    return pathname?.startsWith(path);
   };
 
-  // State for dropdowns
-  const [dropdowns, setDropdowns] = useState({
+  const [dropdowns, setDropdowns] = useState<DropdownState>({
     leistungen: false,
     ankauf: false
   });
 
-  const toggleDropdown = (key: any) => {
+  const toggleDropdown = (key: DropdownKey) => {
     setDropdowns(prev => ({
       ...prev,
       [key]: !prev[key]
@@ -45,6 +50,7 @@ export default function Header() {
               width={75}
               height={75}
               alt="logo"
+              priority
             />
           </Link>
           <button
