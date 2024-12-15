@@ -1,23 +1,52 @@
 "use client";
 import Image from "next/image";
-// import { useEffect } from 'react';
+import Link from "next/link";
+import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
 
 export default function Header() {
+  const pathname = usePathname();
+  const [isClient, setIsClient] = useState(false);
+
+  // Set isClient to true once component mounts
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  // Function to check if a path is active
+  const isActive = (path: string) => {
+    if (!isClient) return false;
+    if (path === '/') {
+      return pathname === path;
+    }
+    return pathname.startsWith(path);
+  };
+
+  // State for dropdowns
+  const [dropdowns, setDropdowns] = useState({
+    leistungen: false,
+    ankauf: false
+  });
+
+  const toggleDropdown = (key: any) => {
+    setDropdowns(prev => ({
+      ...prev,
+      [key]: !prev[key]
+    }));
+  };
+
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container">
-          <a className="navbar-brand" href="#">
-            {/* <img src="assets/images/logo.png" width="75" alt="logo" /> */}
-            {/* import Image from 'next/image'; */}
-
+          <Link className="navbar-brand" href="/">
             <Image
               src="/images/logo.png"
               width={75}
-              height={75} // you'll need to specify height too
+              height={75}
               alt="logo"
             />
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -32,65 +61,82 @@ export default function Header() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="leistungenDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                <Link 
+                  className={`nav-link ${isClient && isActive('/') ? 'active' : ''}`}
+                  href="/"
                 >
-                  Leistungen
-                </a>
+                  HOME
+                </Link>
+              </li>
+              <li className={`nav-item dropdown ${isClient && isActive('/leistungen') ? 'active' : ''}`}>
+                <div
+                  className={`nav-link dropdown-toggle ${isClient && isActive('/leistungen') ? 'active' : ''}`}
+                  role="button"
+                  onClick={() => toggleDropdown('leistungen')}
+                  style={{ cursor: 'pointer' }}
+                >
+                  LEISTUNGEN
+                </div>
                 <ul
-                  className="dropdown-menu"
-                  aria-labelledby="leistungenDropdown"
+                  className={`dropdown-menu ${dropdowns.leistungen ? 'show' : ''}`}
                 >
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Leistungen
-                    </a>
+                    <Link 
+                      className={`dropdown-item ${isClient && isActive('/leistungen') ? 'active' : ''}`}
+                      href="/leistungen"
+                      onClick={() => toggleDropdown('leistungen')}
+                    >
+                      LEISTUNGEN
+                    </Link>
                   </li>
                 </ul>
               </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="ankaufDropdown"
+              <li className={`nav-item dropdown ${isClient && isActive('/ankaufsprofil') ? 'active' : ''}`}>
+                <div
+                  className={`nav-link dropdown-toggle ${isClient && isActive('/ankaufsprofil') ? 'active' : ''}`}
                   role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                  onClick={() => toggleDropdown('ankauf')}
+                  style={{ cursor: 'pointer' }}
                 >
-                  AnkauFsprofil
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="ankaufDropdown">
+                  ANKAUFSPROFIL
+                </div>
+                <ul
+                  className={`dropdown-menu ${dropdowns.ankauf ? 'show' : ''}`}
+                >
                   <li>
-                    <a className="dropdown-item" href="#">
-                      AnkauFsprofil
-                    </a>
+                    <Link 
+                      className={`dropdown-item ${isClient && isActive('/ankaufsprofil') ? 'active' : ''}`}
+                      href="/ankaufsprofil"
+                      onClick={() => toggleDropdown('ankauf')}
+                    >
+                      ANKAUFSPROFIL
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#">
-                  Person
-                </a>
+                <Link 
+                  className={`nav-link ${isClient && isActive('/person') ? 'active' : ''}`}
+                  href="/person"
+                >
+                  PERSON
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#">
-                  Impressum
-                </a>
+                <Link 
+                  className={`nav-link ${isClient && isActive('/impressum') ? 'active' : ''}`}
+                  href="/impressum"
+                >
+                  IMPRESSUM
+                </Link>
               </li>
             </ul>
-            <button type="button" className="btn btn-outline-secondary">
+            <Link 
+              href="/contact-us" 
+              className={`btn ${isClient && isActive('/contact-us') ? 'btn-secondary' : 'btn-outline-secondary'}`}
+            >
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </nav>
