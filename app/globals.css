@@ -1,8 +1,9 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-:root {
+/* @import 'bootstrap/dist/css/bootstrap.min.css'; */
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -18,4 +19,148 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Add to your global CSS file */
+
+/* .dropdown-menu {
+  margin-top: 0;
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+} */
+
+
+.navbar-light .navbar-nav .nav-link {
+	font-family: "Raleway", sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding: 10px 15px;
+}
+.bg-grey {
+	background: #B3CBD8;
+}
+.text-grey {
+	color: #B3CBD8;
+}
+.font-raleway {
+	font-family: "Raleway", sans-serif !important;
+}
+.font-poppins {
+	font-family: "Poppins", sans-serif !important;
+}
+.font-lato {
+	font-family: "Lato", sans-serif !important;
+}
+.font-inter {
+	font-family: "Inter", sans-serif !important;
+}
+.font-nunito {
+	font-family: "Nunito", sans-serif !important;
+}
+.fw-500 {
+	font-weight: 500 !important;
+}
+.fw-600 {
+	font-weight: 600 !important;
+}
+.text-justify {
+	text-align: justify;
+}
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    border-bottom: 1px solid;
+}
+.fav {
+	position: absolute;
+	width: 200px;
+	bottom: -3px;
+}
+.box {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-gap: 25px;
+}
+.cards {
+	border-radius: 20px;
+}
+.bg-green {
+	background: #DFF7EA;
+}
+.cards .desc {
+	width: 70%;
+}
+.cards button {
+	font-size: 14px;
+}
+.key {
+    position: absolute;
+    bottom: 15px;
+    width: 100px;
+    right: 20px;
+}
+.contact-banner, .page-title {
+	background-image: linear-gradient(90deg, rgb(0 0 0 / 68%), rgb(0 0 0 / 26%)), url('/images/home-contact-bg.jpg');
+	background-position: center;
+	background-size: cover;
+}
+.footer {
+	background: #F7F7F7;
+}
+.footer .desc, .footer .title, .copyright, .copyright-link {
+	color: #4A4A4A;
+}
+.footer .link {
+	color: #403429;
+	text-decoration: none;
+}
+.footer button {
+	width: 17rem;
+	padding: 12px 0px;
+}
+.img-corner-round {
+	width: 450px;
+    height: 500px;
+    object-fit: cover;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+
+@media (min-width: 576px) {
+	.box {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (min-width: 992px) {
+	.box {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media (max-width: 767px) {
+	.contact-banner {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.img-corner-round {
+		width: 300px;
+		height: 350px;
+	}
+}
+@media (max-width: 1200px) {
+	.key {
+		right: 10px
+	}
+}
+@media (min-width: 768px) {
+	.w-md-75 {
+		width: 75%;
+	}
+	.w-md-50 {
+		width: 50%;
+	}
+	.fs-md-5 {
+		font-size: 1.25rem!important;
+	}
 }

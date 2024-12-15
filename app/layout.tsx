@@ -4,6 +4,8 @@ import "./globals.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { BootstrapProvider } from './providers';
+
 // Import Font Awesome
 import "@fortawesome/fontawesome-svg-core/styles.css"; // Import the FontAwesome styles
 const geistSans = localFont({
@@ -32,9 +34,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+         <BootstrapProvider>
         <Header />
         {children}
         <Footer />
+        </BootstrapProvider>
       </body>
     </html>
   );
