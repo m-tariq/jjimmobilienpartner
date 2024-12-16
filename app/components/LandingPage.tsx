@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function LandingPage() {
   return (
     <>
-      <section className="banner bg-grey position-relative">
+      <section className="banner bg-light-blue position-relative">
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-7 py-5">
@@ -67,7 +67,7 @@ export default function LandingPage() {
       </section>
 
       <section className="achievement py-5">
-        <h4 className="text-grey fw-bold font-raleway fs-6 text-center">Überblick</h4>
+        <h4 className="text-light-blue fw-bold font-raleway fs-6 text-center">Überblick</h4>
         <h4 className="font-poppins fs-1 fw-600 text-center">Meine Leistungen</h4>
         <div className="container mt-5">
           <div className="box">

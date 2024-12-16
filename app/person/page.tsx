@@ -12,8 +12,8 @@ export default function About() {
       </div>
     </section>
 
-    <section className="py-5">
-         <div className="container my-md-5">
+    <section className="pt-5">
+         <div className="container mt-md-5">
           <div className="row">
             <div className="col-md-5">
               <Image 
@@ -23,10 +23,11 @@ export default function About() {
                 width={500}
                 height={300}
               />
+              <div className='polkadot d-block ms-auto mt-2'></div>
             </div>
             <div className="col-md-1"></div>
             <div className="col-md-6 my-auto">
-            <h4 className="text-grey fw-bold font-raleway fs-5">About Us</h4>
+            <h4 className="text-light-blue fw-bold font-raleway fs-5">About Us</h4>
               <h4 className="font-poppins fw-600 display-6 mb-md-4 mb-3">The JAN JACOBI GROUP</h4>
               <p className="font-poppins fw-normal fs-5 mb-md-4 mb-3 text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
               <h6 className="font-poppins fw-500 fs-4 mb-3">Our Mission</h6>
