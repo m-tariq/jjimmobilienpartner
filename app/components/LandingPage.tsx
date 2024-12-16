@@ -1,4 +1,5 @@
 "use client";
+import { auto } from '@popperjs/core';
 import Image from 'next/image';
 
 export default function LandingPage() {
@@ -11,10 +12,10 @@ export default function LandingPage() {
               <h4 className="mb-md-5 mb-2 font-raleway fw-600 display-4 text-md-center">Herzlichen Willkommen</h4>
               <h4 className="font-raleway fw-600 display-4 w-md-75 mx-auto">Ihr Immobilien<span className="d-md-block">partner</span> aus Wuppertal</h4>
               <Image 
-                className="fav d-xl-block d-none" 
+                className="fav h-auto d-xl-block d-none" 
                 src="/images/fav.png" 
                 alt="Favorite"
-                width={100}
+                width={200}
                 height={100}
               />
             </div>
@@ -23,14 +24,14 @@ export default function LandingPage() {
                 <div className="col-6">
                   <Image 
                     src="/images/1.png" 
-                    className="w-100 shadow-1-strong rounded mb-4"
+                    className="w-100 h-auto shadow-1-strong rounded mb-4"
                     alt="Image 1"
                     width={400}
-                    height={300}
+                    height={100}
                   />
                   <Image 
                     src="/images/2.png" 
-                    className="w-100 shadow-1-strong rounded"
+                    className="w-100 h-auto shadow-1-strong rounded"
                     alt="Image 2"
                     width={400}
                     height={300}
@@ -39,21 +40,21 @@ export default function LandingPage() {
                 <div className="col-6">
                   <Image 
                     src="/images/3.png" 
-                    className="w-100 shadow-1-strong rounded mb-4"
+                    className="w-100 h-auto shadow-1-strong rounded mb-4"
                     alt="Image 3"
                     width={400}
                     height={300}
                   />
                   <Image 
                     src="/images/1.png" 
-                    className="w-100 shadow-1-strong rounded mb-4"
+                    className="w-100 h-auto shadow-1-strong rounded mb-4"
                     alt="Image 1 repeat"
                     width={400}
                     height={300}
                   />
                   <Image 
                     src="/images/3.png" 
-                    className="w-100 shadow-1-strong rounded"
+                    className="w-100 h-auto shadow-1-strong rounded"
                     alt="Image 3 repeat"
                     width={400}
                     height={300}
@@ -104,10 +105,10 @@ export default function LandingPage() {
                   Mehr Informationen
                 </button>
                 <Image 
-                  className="key" 
+                  className="key h-auto" 
                   src="/images/key.png" 
                   alt="Key icon"
-                  width={50}
+                  width={100}
                   height={50}
                 />
               </div>

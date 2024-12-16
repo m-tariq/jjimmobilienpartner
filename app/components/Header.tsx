@@ -139,7 +139,7 @@ export default function Header() {
             </ul>
             <Link 
               href="/contact-us" 
-              className={`btn ${isClient && isActive('/contact-us') ? 'btn-secondary' : 'btn-outline-secondary'}`}
+              className={`btn ${isClient && isActive('/contact-us') ? 'btn-secondary' : 'btn-outline-dark'}`}
             >
               Contact Us
             </Link>

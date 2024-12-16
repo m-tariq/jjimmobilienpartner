@@ -10,6 +10,7 @@ export default function Footer() {
           <Link href="/">
             <Image
               src="/images/logo.png"
+              className="h-auto"
               width={100}
               height={40}
               alt="Logo"

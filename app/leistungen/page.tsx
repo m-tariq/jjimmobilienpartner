@@ -82,7 +82,7 @@ export default function Service() {
         <p className="text-white fs-4 w-md-75 font-lato fw-normal mx-auto mb-4 pb-md-2 px-md-5 text-md-center">
           Hier gelangen Sie zu unserem Kontaktformular, wo Sie uns unkompliziertund unverbindlich die Kerndaten zu Ihrem Objekt übermitteln können.
         </p>
-        <Link href="/contact">
+        <Link href="/contact" className='text-decoration-none text-dark'>
           <button type="button" className="btn bg-white px-5 d-md-block mx-auto fs-6 fw-600 font-raleway">
             Contact Us
           </button>

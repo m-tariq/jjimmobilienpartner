@@ -166,7 +166,7 @@ body {
   text-decoration: none;
 }
 
-.footer button {
+.footer .contact-btn {
   width: 17rem;
   padding: 12px 0px;
 }
