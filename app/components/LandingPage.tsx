@@ -24,14 +24,14 @@ export default function LandingPage() {
                 <div className="col-6">
                   <Image 
                     src="/images/1.png" 
-                    className="w-100 h-auto shadow-1-strong rounded mb-4"
+                    className="w-100 h-auto rounded-bottom mb-4"
                     alt="Image 1"
                     width={400}
                     height={100}
                   />
                   <Image 
                     src="/images/2.png" 
-                    className="w-100 h-auto shadow-1-strong rounded"
+                    className="w-100 h-auto rounded-top"
                     alt="Image 2"
                     width={400}
                     height={300}
@@ -40,7 +40,7 @@ export default function LandingPage() {
                 <div className="col-6">
                   <Image 
                     src="/images/3.png" 
-                    className="w-100 h-auto shadow-1-strong rounded mb-4"
+                    className="w-100 h-auto rounded-bottom mb-4"
                     alt="Image 3"
                     width={400}
                     height={300}
@@ -54,7 +54,7 @@ export default function LandingPage() {
                   />
                   <Image 
                     src="/images/3.png" 
-                    className="w-100 h-auto shadow-1-strong rounded"
+                    className="w-100 h-auto rounded-top"
                     alt="Image 3 repeat"
                     width={400}
                     height={300}

@@ -12,7 +12,7 @@ export default function Contact() {
       </div>
     </section>
 
-    <section className="pt-5 bg-grey">
+    <section className="pt-5 bg-grey mb-5">
              <div className="container mt-md-5">
               <div className="row">
                 <div className="col-md-6 my-auto">
