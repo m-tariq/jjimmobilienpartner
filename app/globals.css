@@ -183,6 +183,12 @@ body {
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
 }
+.img-double {
+  width: 325px;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
 .polkadot {
   width: 200px;
@@ -220,6 +226,10 @@ body {
   .img-corner-round {
     width: 300px;
     height: 350px;
+  }
+  .img-double {
+    width: 250px;
+    height: 300px;
   }
 }
 

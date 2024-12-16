@@ -30,6 +30,7 @@ export default function Footer() {
               <p className="desc font-nunito fs-5 fw-600 my-2">
                 Bridging connection between<br /> people and property.
               </p>
+              <p className="font-nunito fs-6 fw-bold">Follow us on : </p>
               <Link
                 href="https://www.instagram.com/janjacobi_immobilien"
                 target="_blank"

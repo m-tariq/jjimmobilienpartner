@@ -66,6 +66,39 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <section className="py-5">
+               <div className="container my-md-5">
+                <div className="row">
+                  <div className="col-md-6 my-auto">
+                    <h4 className="font-poppins fw-bold display-6 mb-md-4 mb-3">Ankaufsprofil</h4>
+                    <p className="font-lato fw-normal fs-6 mb-md-4 mb-3 text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <button type="button" className="btn btn-outline-dark font-raleway fw-600 fs-6">
+                      mehr Info
+                    </button>
+                  </div>
+                  <div className="col-md-1 mb-3 mb-md-0"></div>
+                  <div className="col-md-5">
+                    <div className='position-relative'>
+                    <Image 
+                      className="img-double"
+                      src="/images/img2.jpeg"
+                      alt="img1"
+                      width={1}
+                      height={1}
+                    />
+                    <Image 
+                      className="img-double position-absolute start-0 ms-5 mt-5"
+                      src="/images/img2.jpeg"
+                      alt="img1"
+                      width={1}
+                      height={1}
+                    />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
       <section className="achievement py-5">
         <h4 className="text-light-blue fw-bold font-raleway fs-6 text-center">Überblick</h4>
         <h4 className="font-poppins fs-1 fw-600 text-center">Meine Leistungen</h4>

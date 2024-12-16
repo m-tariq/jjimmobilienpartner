@@ -88,7 +88,9 @@ export default function Purchase() {
 						<li>Eine diskrete Behandlung der Themen „Verkauf“ und „Unterlageneinsicht“ sichern wir Ihnen selbstverständlich zu.</li>
 						<li>Eine Kaufentscheidung kann nach Prüfung der Objektunterlagen und in Absprache mit der Geschäftsführung innerhalb von 24 Stunden erfolgen.</li>
 					</ul>
+					<Link href="/contact-us">
 					<button type="button" className="btn btn-outline-dark font-raleway fw-600 fs-6 px-5">Contact Us</button>
+					</Link>
 				</div>
 			</div>
 		</div>
