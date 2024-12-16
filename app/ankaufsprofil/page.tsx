@@ -18,8 +18,8 @@ export default function Purchase() {
         </div>
       </section>
 
-      <section className="py-5">
-        <div className="container my-md-5">
+      <section className="pt-5">
+        <div className="container mt-md-5">
           <div className="row">
             <div className="col-md-6 my-auto">
               <h4 className="font-poppins fw-600 display-6 mb-md-4 mb-3">
@@ -87,8 +87,8 @@ export default function Purchase() {
               </p>
               <ul className="font-raleway fw-500 fs-6 text-justify">
                 <li>
-                  Eine diskrete Behandlung der Themen „Verkauf" und
-                  „Unterlageneinsicht" sichern wir Ihnen selbstverständlich zu.
+                  Eine diskrete Behandlung der Themen &quot;Verkauf&quot; und
+                  &quot;Unterlageneinsicht&quot; sichern wir Ihnen selbstverständlich zu.
                 </li>
                 <li>
                   Eine Kaufentscheidung kann nach Prüfung der Objektunterlagen
@@ -140,8 +140,8 @@ export default function Purchase() {
               </p>
               <ul className="font-raleway fw-500 fs-6 text-justify mb-3">
                 <li>
-                  Eine diskrete Behandlung der Themen „Verkauf" und
-                  „Unterlageneinsicht" sichern wir Ihnen selbstverständlich zu.
+                  Eine diskrete Behandlung der Themen &quot;Verkauf&quot; und
+                  &quot;Unterlageneinsicht&quot; sichern wir Ihnen selbstverständlich zu.
                 </li>
                 <li>
                   Eine Kaufentscheidung kann nach Prüfung der Objektunterlagen
