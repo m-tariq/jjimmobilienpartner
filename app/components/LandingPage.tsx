@@ -1,6 +1,6 @@
 "use client";
-import { auto } from '@popperjs/core';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function LandingPage() {
   return (
@@ -17,6 +17,7 @@ export default function LandingPage() {
                 alt="Favorite"
                 width={200}
                 height={100}
+                priority
               />
             </div>
             <div className="col-md-5">
@@ -27,7 +28,7 @@ export default function LandingPage() {
                     className="w-100 h-auto rounded-bottom mb-4"
                     alt="Image 1"
                     width={400}
-                    height={100}
+                    height={300}
                   />
                   <Image 
                     src="/images/2.png" 
@@ -67,44 +68,43 @@ export default function LandingPage() {
       </section>
 
       <section className="py-5">
-               <div className="container my-md-5">
-                <div className="row">
-                  <div className="col-md-6 my-auto">
-                    <h4 className="font-poppins fw-bold display-6 mb-md-4 mb-3">Ankaufsprofil</h4>
-                    <p className="font-lato fw-normal fs-6 mb-md-4 mb-3 text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    <button type="button" className="btn btn-outline-dark font-raleway fw-600 fs-6">
-                      mehr Info
-                    </button>
-                  </div>
-                  <div className="col-md-1 mb-3 mb-md-0"></div>
-                  <div className="col-md-5">
-                    <div className='position-relative'>
-                    <Image 
-                      className="img-double"
-                      src="/images/img2.jpeg"
-                      alt="img1"
-                      width={1}
-                      height={1}
-                    />
-                    <Image 
-                      className="img-double position-absolute start-0 ms-5 mt-5"
-                      src="/images/img2.jpeg"
-                      alt="img1"
-                      width={1}
-                      height={1}
-                    />
-                    </div>
-                  </div>
-                </div>
+        <div className="container my-md-5">
+          <div className="row">
+            <div className="col-md-6 my-auto">
+              <h4 className="font-poppins fw-bold display-6 mb-md-4 mb-3">Ankaufsprofil</h4>
+              <p className="font-lato fw-normal fs-6 mb-md-4 mb-3 text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              <Link href="/more-info" className="btn btn-outline-dark font-raleway fw-600 fs-6">
+                mehr Info
+              </Link>
+            </div>
+            <div className="col-md-1 mb-3 mb-md-0"></div>
+            <div className="col-md-5">
+              <div className='position-relative'>
+                <Image 
+                  className="img-double"
+                  src="/images/img2.jpeg"
+                  alt="Property image"
+                  width={500}
+                  height={300}
+                />
+                <Image 
+                  className="img-double position-absolute start-0 ms-5 mt-5"
+                  src="/images/img2.jpeg"
+                  alt="Property image overlay"
+                  width={500}
+                  height={300}
+                />
               </div>
-            </section>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="achievement py-5">
         <h4 className="text-light-blue fw-bold font-raleway fs-6 text-center">Überblick</h4>
         <h4 className="font-poppins fs-1 fw-600 text-center">Meine Leistungen</h4>
         <div className="container mt-5">
           <div className="box">
-            {/* Cards Section */}
             {[
               {
                 title: "Anlagenberatung",
@@ -134,9 +134,9 @@ export default function LandingPage() {
               <div key={index} className="cards p-3 border-0 bg-green position-relative">
                 <h4 className="font-poppins fs-2 fw-500">{card.title}</h4>
                 <p className="desc fs-6 font-lato fw-normal">{card.desc}</p>
-                <button type="button" className="btn bg-white rounded-pill mt-4 font-poppins fw-600">
+                <Link href={`/services/${card.title.toLowerCase().replace(/\s+/g, '-')}`} className="btn bg-white rounded-pill mt-4 font-poppins fw-600">
                   Mehr Informationen
-                </button>
+                </Link>
                 <Image 
                   className="key h-auto" 
                   src="/images/key.png" 
@@ -158,9 +158,11 @@ export default function LandingPage() {
           <p className="text-white fs-4 w-md-75 font-lato fw-normal mx-auto mb-4 pb-md-2 px-md-5 text-md-center">
             Hier gelangen Sie zu unserem Kontaktformular, wo Sie uns unkompliziertund unverbindlich die Kerndaten zu Ihrem Objekt übermitteln können.
           </p>
-          <button type="button" className="btn bg-white px-5 d-md-block mx-auto fs-6 fw-600 font-raleway">
-            Contact Us
-          </button>
+          <Link href="/contact" className="d-md-block text-center">
+            <button type="button" className="btn bg-white px-5 fs-6 fw-600 font-raleway">
+              Contact Us
+            </button>
+          </Link>
         </div>
       </section>
     </>

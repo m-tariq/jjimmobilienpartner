@@ -2,7 +2,41 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
+
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      // Add your form submission logic here
+      console.log('Form data:', formData);
+      // Reset form after submission
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+  };
+
   return (
     <>
       <section className="page-title py-5">
@@ -36,7 +70,6 @@ export default function Contact() {
               <div className="divider my-3"></div>
               <div className="d-flex align-items-center gap-3 mt-4">
                 <div className="icon">
-                  {/* <i className="fa fa-envelope-o"></i> */}
                   <FontAwesomeIcon icon={faEnvelope} />
                 </div>
                 <div>
@@ -48,7 +81,6 @@ export default function Contact() {
               </div>
               <div className="d-flex align-items-center gap-3 mt-4">
                 <div className="icon">
-                  {/* <i className="fa fa-phone"></i> */}
                   <FontAwesomeIcon icon={faPhone} />
                 </div>
                 <div>
@@ -60,7 +92,6 @@ export default function Contact() {
               </div>
               <div className="d-flex align-items-center gap-3 mt-4">
                 <div className="icon">
-                  {/* <i className="fa fa-map-marker"></i> */}
                   <FontAwesomeIcon icon={faLocationDot} />
                 </div>
                 <div>
@@ -73,13 +104,16 @@ export default function Contact() {
             </div>
             <div className="col-md-1"></div>
             <div className="col-md-5 bg-white rounded-3 py-5 my-5">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <label className="form-label font-poppins fw-600 fs-6">
                     Vor- und Nachname
                   </label>
                   <input
                     type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     className="form-control py-2"
                     placeholder="Your Name"
                   />
@@ -90,6 +124,9 @@ export default function Contact() {
                   </label>
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="form-control py-2"
                     placeholder="creativelayers088@gmail.com"
                   />
@@ -100,6 +137,9 @@ export default function Contact() {
                   </label>
                   <input
                     type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     className="form-control py-2"
                     placeholder="Your Number"
                   />
@@ -108,7 +148,12 @@ export default function Contact() {
                   <label className="form-label font-poppins fw-600 fs-6">
                     Nachricht (Pflichtfeld)
                   </label>
-                  <textarea className="form-control"></textarea>
+                  <textarea 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="form-control"
+                  ></textarea>
                 </div>
                 <h6 className="font-poppins fw-normal fs-6 my-4">
                   Es gilt unsere{" "}
@@ -116,13 +161,12 @@ export default function Contact() {
                     Datenschutzerklarung
                   </a>
                 </h6>
-                <a
-                  href=""
+                <button
                   type="submit"
-                  className="btn bg-light-blue text-white d-block rounded-3 py-2"
+                  className="btn bg-light-blue text-white d-block rounded-3 py-2 w-100"
                 >
                   Absenden
-                </a>
+                </button>
               </form>
             </div>
           </div>
