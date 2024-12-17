@@ -74,9 +74,9 @@ export default function Contact() {
               <p className="font-raleway fw-normal fs-6">
                 Our opening and Accessibility times:
               </p>
-              <div className="divider my-3"></div>
+              <div className="border-b-2 border-[#b3cbd8] my-3"></div>
               <div className="d-flex align-items-center gap-3 mt-4">
-                <div className="icon">
+                <div className="icon min-w-[35px] md:min-w-[70px] md:w-[70px] w-[35px] md:h-[70px] h-[35px] md:text-2xl text-sm bg-[#D9D9D9] rounded-circle d-flex align-items-center justify-content-center">
                   <FontAwesomeIcon icon={faEnvelope} />
                 </div>
                 <div>
@@ -87,7 +87,7 @@ export default function Contact() {
                 </div>
               </div>
               <div className="d-flex align-items-center gap-3 mt-4">
-                <div className="icon">
+                <div className="icon min-w-[35px] md:min-w-[70px] md:w-[70px] w-[35px] md:h-[70px] h-[35px] md:text-2xl text-sm bg-[#D9D9D9] rounded-circle d-flex align-items-center justify-content-center">
                   <FontAwesomeIcon icon={faPhone} />
                 </div>
                 <div>
@@ -98,7 +98,7 @@ export default function Contact() {
                 </div>
               </div>
               <div className="d-flex align-items-center gap-3 mt-4">
-                <div className="icon">
+                <div className="icon min-w-[35px] md:min-w-[70px] md:w-[70px] w-[35px] md:h-[70px] h-[35px] md:text-2xl text-sm bg-[#D9D9D9] rounded-circle d-flex align-items-center justify-content-center">
                   <FontAwesomeIcon icon={faLocationDot} />
                 </div>
                 <div>
