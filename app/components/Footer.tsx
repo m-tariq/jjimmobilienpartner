@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
@@ -31,14 +33,29 @@ export default function Footer() {
                 Bridging connection between<br /> people and property.
               </p>
               <p className="font-nunito fs-6 fw-bold">Follow us on : </p>
+              <div className="d-flex gap-3">
+              <Link
+                href=""
+                target="_blank"
+                className="social d-flex align-items-center justify-content-center rounded-circle bg-white text-dark"
+              >
+                <FontAwesomeIcon icon={faFacebookF} />
+              </Link>
+              <Link
+                href=""
+                target="_blank"
+                className="social d-flex align-items-center justify-content-center rounded-circle bg-white text-dark"
+              >
+                <FontAwesomeIcon icon={faTwitter} />
+              </Link>
               <Link
                 href="https://www.instagram.com/janjacobi_immobilien"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="btn-sm rounded-circle bg-white text-dark"
+                className="social d-flex align-items-center justify-content-center rounded-circle bg-white text-dark"
               >
-                <i className="fa fa-instagram"></i>
+                <FontAwesomeIcon icon={faInstagram} />
               </Link>
+              </div>
             </div>
 
             <div className="col-md-2 mx-auto text-center mt-3">

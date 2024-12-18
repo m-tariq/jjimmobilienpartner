@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 // Define types for dropdown state
 type DropdownState = {
@@ -76,12 +78,12 @@ export default function Header() {
               </li>
               <li className={`nav-item dropdown ${isClient && isActive('/leistungen') ? 'active' : ''}`}>
                 <div
-                  className={`nav-link dropdown-toggle ${isClient && isActive('/leistungen') ? 'active' : ''}`}
+                  className={`nav-link dropdown-tog gle ${isClient && isActive('/leistungen') ? 'active' : ''}`}
                   role="button"
                   onClick={() => toggleDropdown('leistungen')}
                   style={{ cursor: 'pointer' }}
                 >
-                  LEISTUNGEN
+                  LEISTUNGEN <FontAwesomeIcon icon={faAngleDown} className="ps-1" />
                 </div>
                 <ul
                   className={`dropdown-menu ${dropdowns.leistungen ? 'show' : ''}`}
@@ -99,12 +101,12 @@ export default function Header() {
               </li>
               <li className={`nav-item dropdown ${isClient && isActive('/ankaufsprofil') ? 'active' : ''}`}>
                 <div
-                  className={`nav-link dropdown-toggle ${isClient && isActive('/ankaufsprofil') ? 'active' : ''}`}
+                  className={`nav-link dropdown-tog gle ${isClient && isActive('/ankaufsprofil') ? 'active' : ''}`}
                   role="button"
                   onClick={() => toggleDropdown('ankauf')}
                   style={{ cursor: 'pointer' }}
                 >
-                  ANKAUFSPROFIL
+                  ANKAUFSPROFIL <FontAwesomeIcon icon={faAngleDown} className="ps-1" />
                 </div>
                 <ul
                   className={`dropdown-menu ${dropdowns.ankauf ? 'show' : ''}`}
