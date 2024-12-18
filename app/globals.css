@@ -181,8 +181,8 @@ body {
   border-bottom-left-radius: 100px;
 }
 .img-double {
-  width: 325px;
-  height: 390px;
+  width: 275px;
+  height: 340px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -223,6 +223,10 @@ body {
 @media (min-width: 992px) {
   .box {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .img-double {
+    width: 325px;
+    height: 390px;
   }
 }
 

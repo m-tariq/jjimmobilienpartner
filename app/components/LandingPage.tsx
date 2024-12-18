@@ -84,15 +84,15 @@ export default function LandingPage() {
                   className="img-double"
                   src="/images/img2.jpeg"
                   alt="Property image"
-                  width={500}
-                  height={300}
+                  width={1}
+                  height={1}
                 />
                 <Image 
                   className="img-double position-absolute start-0 ms-5 mt-5"
                   src="/images/img2.jpeg"
                   alt="Property image overlay"
-                  width={500}
-                  height={300}
+                  width={1}
+                  height={1}
                 />
               </div>
             </div>
