@@ -155,6 +155,7 @@ export default function Contact() {
                   <label className="form-label font-poppins fw-600 fs-6">
                     Nachricht (Pflichtfeld)
                   </label>
+                  
                   <textarea 
                     name="message"
                     value={formData.message}
