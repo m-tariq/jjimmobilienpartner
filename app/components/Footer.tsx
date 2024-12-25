@@ -33,34 +33,34 @@ export default function Footer() {
                 Bridging connection between<br /> people and property.
               </p>
               <p className="font-nunito fs-6 fw-bold">Follow us on : </p>
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 justify-content-md-start justify-content-center">
               <Link
                 href=""
                 target="_blank"
-                className="social d-flex align-items-center justify-content-center rounded-circle bg-white text-dark"
+                className="social-icon d-flex align-items-center justify-content-center rounded-circle bg-white text-dark"
               >
                 <FontAwesomeIcon icon={faFacebookF} />
               </Link>
-              <Link
+              {/* <Link
                 href=""
                 target="_blank"
                 className="social d-flex align-items-center justify-content-center rounded-circle bg-white text-dark"
               >
                 <FontAwesomeIcon icon={faTwitter} />
-              </Link>
+              </Link> */}
               <Link
                 href="https://www.instagram.com/janjacobi_immobilien"
                 target="_blank"
-                className="social d-flex align-items-center justify-content-center rounded-circle bg-white text-dark"
+                className="social-icon d-flex align-items-center justify-content-center rounded-circle bg-white text-dark"
               >
                 <FontAwesomeIcon icon={faInstagram} />
               </Link>
               </div>
             </div>
 
-            <div className="col-md-2 mx-auto text-center mt-3">
+            <div className="col-md-2 me-auto text-center mt-3">
               <h6 className="title font-nunito fs-5 fw-bold mb-4">
-                Quick Links
+              Seitenlinks
               </h6>
               <p>
                 <Link className="link font-nunito fs-6 fw-500" href="/">
@@ -83,17 +83,16 @@ export default function Footer() {
                 </Link>
               </p>
             </div>
-            <div className="col-md-2"></div>
 
-            <div className="col-md-3 mx-auto mt-3">
+            <div className="col-md-4 ms-auto mt-3">
               <h6 className="title font-nunito fs-5 fw-bold mb-4">
-                Contact Information:
+              So erreichen Sie uns:
               </h6>
               <p className="link font-nunito fs-6 fw-500">
-                Email: info@janjacobi-immobilien.de
+                Email: info@jj-immobilienpartner.de
               </p>
               <p className="link font-nunito fs-6 fw-500">
-                Phone: +49 000 000000
+              Telefonnummer: +49 000 000000
               </p>
             </div>
           </div>
@@ -103,7 +102,7 @@ export default function Footer() {
 
         <section className="d-flex gap-3 flex-wrap justify-content-md-between justify-content-center align-items-center pb-3">
           <div className="copyright font-poppins fw-normal fs-6">
-            © {new Date().getFullYear()} Jan Jacobi • All Rights Reserved
+            © {new Date().getFullYear()} Jan Jacobi <span className="mx-2 fw-bolder">•</span> All Rights Reserved
           </div>
           <div className="d-flex flex-wrap gap-3 justify-content-md-end justify-content-center">
             <Link
