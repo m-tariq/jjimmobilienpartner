@@ -59,8 +59,8 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="pt-5 bg-grey mb-5">
-        <div className="container mt-md-5">
+      <section className="py-5 bg-grey">
+        <div className="container my-md-5">
           <div className="row">
             <div className="col-md-6 my-auto">
               <Image
@@ -74,8 +74,10 @@ export default function Contact() {
               <p className="font-raleway fw-normal fs-6">
                 Our opening and Accessibility times:
               </p>
-              <div className="divider my-3"></div>
-              <div className="d-flex align-items-center gap-3 mt-4">
+              <div className="divider mt-3 mb-5"></div>
+              <p className='font-raleway fw-normal fs-6 mb-0'>If you have urgent concerns, you can call us at any time or speak to us in the mailbox and provide a telephone number. We will get back as soon as possible.</p>
+              <p className='font-raleway fw-600 fs-6'>Visits must always be arranged on time.</p>
+              {/* <div className="d-flex align-items-center gap-3 mt-4">
                 <div className="icon">
                   <FontAwesomeIcon icon={faEnvelope} />
                 </div>
@@ -107,10 +109,10 @@ export default function Contact() {
                     JAN JACOBI , Herderstr, 4th 42327 ,Wuppertal
                   </h6>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="col-md-1"></div>
-            <div className="col-md-5 bg-white rounded-3 py-5 my-5">
+            <div className="col-md-5 bg-white rounded-3 py-3">
               <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <label className="form-label font-poppins fw-600 fs-6">
@@ -179,6 +181,46 @@ export default function Contact() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className='py-5 my-md-5'>
+        <h4 className='font-inter fw-bold text-center mb-5'>Meine Kontaktinformationen</h4>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-md-4'>
+              <div className='d-flex justify-content-center'>
+                <div className="icon">
+                  <FontAwesomeIcon icon={faEnvelope} />
+                </div>
+              </div>
+              <h6 className="font-poppins fw-600 fs-6 text-center mt-3 mb-4">Email</h6>
+              <h6 className="font-poppins fw-500 fs-6 mb-0 text-center">Info@jj-immobilienpartner.de</h6>
+            </div>
+            <div className='col-md-4'>
+              <div className='d-flex justify-content-center'>
+                <div className="icon">
+                  <FontAwesomeIcon icon={faPhone} />
+                </div>
+              </div>
+              <h6 className="font-poppins fw-600 fs-6 text-center mt-3 mb-4">Telefon</h6>
+              <h6 className="font-poppins fw-500 fs-6 mb-0 text-center mb-1">+00 9191829229</h6>
+              <h6 className="font-poppins fw-500 fs-6 mb-0 text-center">+00 9191829229</h6>
+            </div>
+            <div className='col-md-4'>
+              <div className='d-flex justify-content-center'>
+                <div className="icon">
+                  <FontAwesomeIcon icon={faLocationDot} />
+                </div>
+              </div>
+              <h6 className="font-poppins fw-600 fs-6 text-center mt-3 mb-4">Adresse</h6>
+              <h6 className="font-poppins fw-500 fs-6 mb-0 text-center">JAN JACOBI<br/> Herderstr. 4 <br/>42327 Wuppertal</h6>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.084288986628!2d7.077071475251197!3d51.23594253049968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8d6b66433f8a3%3A0x6845367a2943e56d!2sHerderstra%C3%9Fe%204%2C%2042327%20Wuppertal%2C%20Germany!5e0!3m2!1sen!2s!4v1735138137159!5m2!1sen!2s" width="100%" height="450" loading="lazy"></iframe>
       </section>
     </>
   );
