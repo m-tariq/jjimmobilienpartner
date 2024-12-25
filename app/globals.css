@@ -149,6 +149,10 @@ body {
   background-position: center;
   background-size: cover;
 }
+.big-img {
+  width: 100%;
+  height: auto;
+}
 
 /* Footer Styles */
 .bg-grey {
@@ -228,6 +232,12 @@ body {
     width: 325px;
     height: 390px;
   }
+  .big-img {
+    width: 280px;
+    margin-left: -20px;
+    height: 450px;
+    object-fit: cover;
+  }
 }
 
 @media (max-width: 767px) {
@@ -260,5 +270,9 @@ body {
   }
   .fs-md-5 {
     font-size: 1.25rem!important;
+  }
+  .bl {
+    border-left: 5px solid #000;
+    padding-left: 15px;
   }
 }

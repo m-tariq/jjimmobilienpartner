@@ -10,7 +10,8 @@ export default function LandingPage() {
           <div className="row">
             <div className="col-md-7 py-5">
               <h4 className="mb-md-5 mb-2 font-raleway fw-600 display-4 text-md-center">Herzlichen Willkommen</h4>
-              <h4 className="font-raleway fw-600 display-4 w-md-75 mx-auto">Ihr Immobilien<span className="d-md-block">partner</span> aus Wuppertal</h4>
+              <h4 className="font-raleway fw-600 display-4 w-md-75 mx-auto bl">Ihr Immobilien <span className="d-md-block">partner</span> aus Wuppertal</h4>
+              <div className='space'></div>
               <Image 
                 className="fav h-auto d-xl-block d-none" 
                 src="/images/fav.png" 
@@ -22,40 +23,40 @@ export default function LandingPage() {
             </div>
             <div className="col-md-5">
               <div className="row">
-                <div className="col-6">
+                <div className="col-6 me-md-3">
                   <Image 
-                    src="/images/1.png" 
-                    className="w-100 h-auto rounded-bottom mb-4"
+                    src="/images/1.jpg" 
+                    className="w-100 h-auto rounded mb-4"
                     alt="Image 1"
                     width={400}
                     height={300}
                   />
                   <Image 
-                    src="/images/2.png" 
-                    className="w-100 h-auto rounded-top"
+                    src="/images/2.jpg" 
+                    className="big-img rounded"
                     alt="Image 2"
                     width={400}
                     height={300}
                   />
                 </div>
-                <div className="col-6">
+                <div className="col-md-5 col-6">
                   <Image 
-                    src="/images/3.png" 
-                    className="w-100 h-auto rounded-bottom mb-4"
+                    src="/images/3.jpg" 
+                    className="w-100 h-auto rounded mb-4"
                     alt="Image 3"
                     width={400}
                     height={300}
                   />
                   <Image 
-                    src="/images/1.png" 
-                    className="w-100 h-auto shadow-1-strong rounded mb-4"
+                    src="/images/4.jpg" 
+                    className="w-100 h-auto rounded mb-4"
                     alt="Image 1 repeat"
                     width={400}
                     height={300}
                   />
                   <Image 
-                    src="/images/3.png" 
-                    className="w-100 h-auto rounded-top"
+                    src="/images/5.jpg" 
+                    className="w-100 h-auto rounded"
                     alt="Image 3 repeat"
                     width={400}
                     height={300}

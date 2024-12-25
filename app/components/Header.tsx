@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 // Define types for dropdown state
 type DropdownState = {
@@ -144,6 +144,9 @@ export default function Header() {
               className={`btn ${isClient && isActive('/contact-us') ? 'btn-secondary' : 'btn-outline-dark'}`}
             >
               Contact Us
+            </Link>
+            <Link href="tel:009191829229" className="text-dark">
+            <FontAwesomeIcon className="ms-4" icon={faPhone} />
             </Link>
           </div>
         </div>
