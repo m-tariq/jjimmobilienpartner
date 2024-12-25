@@ -45,6 +45,8 @@ body {
   --color-bg-grey: #F7F7F7;
   --color-link: #403429;
   --color-green: #DFF7EA;
+  --color-sky-blue: #B5D5E3;
+  --color-yellow: #D4B568;
 }
 
 /* Font Classes */
@@ -95,13 +97,20 @@ body {
 .bg-light-blue {
   background: var(--color-light-blue) !important;
 }
-
+.bg-yellow {
+  background: var(--color-yellow) !important;
+}
 .text-light-blue {
   color: var(--color-light-blue);
 }
-
+.bg-sky-blue {
+  background: var(--color-sky-blue);
+}
 .bg-green {
   background: var(--color-green);
+}
+.bg-sky-blue-gradient {
+  background: linear-gradient(180deg, #B5D5E3 0%, #FFFFFF 100%);
 }
 
 /* Text Styles */

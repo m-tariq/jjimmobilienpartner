@@ -68,7 +68,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-5">
+      {/* <section className="py-5">
         <div className="container my-md-5">
           <div className="row">
             <div className="col-md-6 my-auto">
@@ -99,9 +99,9 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="achievement py-5">
+      <section className="achievement py-5 my-md-5">
         <h4 className="text-light-blue fw-bold font-raleway fs-6 text-center">Überblick</h4>
         <h4 className="font-poppins fs-1 fw-600 text-center">Meine Leistungen</h4>
         <div className="container mt-5">
@@ -132,12 +132,12 @@ export default function LandingPage() {
                 desc: "Wir sind stets auf der Suche nach Immobilien für unseren eigenen Bestand. Eine diskrete Prüfung ist selbstverständlich."
               }
             ].map((card, index) => (
-              <div key={index} className="cards p-3 border-0 bg-green position-relative">
+              <div key={index} className="cards p-3 border-0 bg-sky-blue-gradient position-relative">
                 <h4 className="font-poppins fs-2 fw-500">{card.title}</h4>
                 <p className="desc fs-6 font-lato fw-normal">{card.desc}</p>
-                <Link href={`/services/${card.title.toLowerCase().replace(/\s+/g, '-')}`} className="btn bg-white rounded-pill mt-4 font-poppins fw-600">
+                {/* <Link href={`/services/${card.title.toLowerCase().replace(/\s+/g, '-')}`} className="btn bg-white rounded-pill mt-4 font-poppins fw-600">
                   Mehr Informationen
-                </Link>
+                </Link> */}
                 <Image 
                   className="key h-auto" 
                   src="/images/key.png" 
@@ -147,6 +147,29 @@ export default function LandingPage() {
                 />
               </div>
             ))}
+          </div>
+        </div>
+        <div className='text-center mt-5'>
+        <Link href="" className="btn bg-black text-white px-3 rounded-pill mt-4 font-poppins fw-600">
+                  Mehr Informationen
+                </Link>
+        </div>
+      </section>
+
+      <section className='my-5'>
+        <div className='container'>
+          <div className='d-flex flex-wrap justify-content-between align-items-center gap-3 p-5 bg-sky-blue rounded-4'>
+            <div className='ms-lg-5'>
+              <h4 className='font-poppins fw-500 fs-3'>Wir kaufen Ihre Immobilie</h4>
+              <p className='font-poppins fw-normal fs-6 mb-0'>We only work with the best companies around the globe</p>
+            </div>
+            <Link href=""
+              className="btn bg-yellow rounded-3 py-3 px-4 font-poppins fw-500 me-lg-5">
+                Ankaufsprofil
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
+                </svg>
+                </Link>
           </div>
         </div>
       </section>
@@ -159,11 +182,14 @@ export default function LandingPage() {
           <p className="text-white fs-4 w-md-75 font-lato fw-normal mx-auto mb-4 pb-md-2 px-md-5 text-md-center">
             Hier gelangen Sie zu unserem Kontaktformular, wo Sie uns unkompliziertund unverbindlich die Kerndaten zu Ihrem Objekt übermitteln können.
           </p>
-          <Link href="/contact" className="d-md-block text-center">
-            <button type="button" className="btn bg-white px-5 fs-6 fw-600 font-raleway">
-              Contact Us
-            </button>
+          <div className='d-flex gap-5 justify-content-center flex-wrap'>
+          <Link href="/contact" className="btn bg-white px-5 fs-6 fw-600 font-raleway rounded-1">
+            Kontakt
           </Link>
+          <Link href="" className="btn bg-white px-5 fs-6 fw-600 font-raleway rounded-1">
+            Direkt Mail
+          </Link>
+          </div>
         </div>
       </section>
     </>
