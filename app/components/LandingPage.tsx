@@ -9,8 +9,8 @@ export default function LandingPage() {
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-7 py-5">
-              <h4 className="mb-md-5 mb-2 font-raleway fw-600 display-4 text-md-center">Herzlichen Willkommen</h4>
-              <h4 className="font-raleway fw-600 display-4 w-md-75 mx-auto bl">Ihr Immobilien <span className="d-md-block">partner</span> aus Wuppertal</h4>
+              <h4 className="mb-md-4 mb-2 font-raleway fw-600 display-4 text-md-center">Herzlichen Willkommen</h4>
+              <h4 className="font-raleway fw-600 display-5 w-md-75 mx-auto bl">Ihr Immobilien <span className="d-md-block">partner</span> aus Wuppertal</h4>
               <div className='space'></div>
               <Image 
                 className="fav h-auto d-xl-block d-none" 
