@@ -121,7 +121,7 @@ body {
 /* Layout Elements */
 .fav {
   position: absolute;
-  width: 200px;
+  width: 150px;
   bottom: -3px;
 }
 
@@ -242,11 +242,15 @@ body {
     height: 390px;
   }
   .big-img {
-    width: 280px;
+    width: 115%;
     margin-left: -20px;
-    height: 450px;
+    margin-top: -7px;
+    height: auto;
     object-fit: cover;
   }
+  /* .space {
+    padding-top: 200px;
+  } */
 }
 
 @media (max-width: 767px) {
