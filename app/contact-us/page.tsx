@@ -11,6 +11,7 @@ interface FormData {
   message: string;
 }
 
+
 export default function Contact() {
   const [formData, setFormData] = useState<FormData>({
     name: '',
