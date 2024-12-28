@@ -183,7 +183,7 @@ export default function LandingPage() {
             Hier gelangen Sie zu unserem Kontaktformular, wo Sie uns unkompliziertund unverbindlich die Kerndaten zu Ihrem Objekt übermitteln können.
           </p>
           <div className='d-flex gap-5 justify-content-center flex-wrap'>
-          <Link href="/contact" className="btn bg-white px-5 fs-6 fw-600 font-raleway rounded-1">
+          <Link href="/contact-us" className="btn bg-white px-5 fs-6 fw-600 font-raleway rounded-1">
             Kontakt
           </Link>
           <Link href="" className="btn bg-white px-5 fs-6 fw-600 font-raleway rounded-1">
