@@ -150,7 +150,7 @@ export default function LandingPage() {
           </div>
         </div>
         <div className='text-center mt-5'>
-        <Link href="" className="btn bg-black text-white px-3 rounded-pill mt-4 font-poppins fw-600">
+        <Link href="/leistungen" className="btn bg-black text-white px-3 rounded-pill mt-4 font-poppins fw-600">
                   Mehr Informationen
                 </Link>
         </div>
