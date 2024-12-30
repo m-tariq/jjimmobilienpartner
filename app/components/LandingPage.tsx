@@ -10,7 +10,7 @@ export default function LandingPage() {
           <div className="row">
             <div className="col-md-7 py-5">
               <h4 className="mb-md-4 mb-2 font-raleway fw-600 display-4 ms-md-5">Herzlichen Willkommen</h4>
-              <h4 className="font-raleway fw-600 display-5 ms-md-5 bl">Ihr Immobilien <span className="d-md-block">partner</span> aus Wuppertal</h4>
+              <h4 className="font-raleway fw-600 display-5 ms-md-5 bl">Ihr <span className="d-md-block">Immobilienpartner</span> aus Wuppertal</h4>
               <div className='space'></div>
               <Image 
                 className="fav h-auto d-xl-block d-none" 
@@ -26,14 +26,14 @@ export default function LandingPage() {
                 <div className="col-6 me-md-3">
                   <Image 
                     src="/images/1.jpg" 
-                    className="w-100 h-auto rounded mb-4"
+                    className="w-100 h-auto top-img mb-4 gallery-img"
                     alt="Image 1"
                     width={400}
                     height={300}
                   />
                   <Image 
                     src="/images/2.jpg" 
-                    className="big-img rounded"
+                    className="big-img bottom-img gallery-img"
                     alt="Image 2"
                     width={400}
                     height={300}
@@ -42,21 +42,21 @@ export default function LandingPage() {
                 <div className="col-md-5 col-6">
                   <Image 
                     src="/images/3.jpg" 
-                    className="w-100 h-auto rounded mb-4"
+                    className="w-100 h-auto top-img mb-4 gallery-img"
                     alt="Image 3"
                     width={400}
                     height={300}
                   />
                   <Image 
                     src="/images/4.jpg" 
-                    className="w-100 h-auto rounded mb-4"
+                    className="w-100 h-auto gallery-img mb-4"
                     alt="Image 1 repeat"
                     width={400}
                     height={300}
                   />
                   <Image 
                     src="/images/5.jpg" 
-                    className="w-100 h-auto rounded"
+                    className="w-100 h-auto bottom-img gallery-img"
                     alt="Image 3 repeat"
                     width={400}
                     height={300}
@@ -163,7 +163,7 @@ export default function LandingPage() {
               <h4 className='font-poppins fw-500 fs-3'>Wir kaufen Ihre Immobilie</h4>
               <p className='font-poppins fw-normal fs-6 mb-0'>We only work with the best companies around the globe</p>
             </div>
-            <Link href=""
+            <Link href="/ankaufsprofil"
               className="btn bg-yellow rounded-3 py-3 px-4 font-poppins fw-500 me-lg-5">
                 Ankaufsprofil
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right ms-2" viewBox="0 0 16 16">

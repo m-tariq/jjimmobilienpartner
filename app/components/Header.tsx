@@ -44,13 +44,13 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="navbar navbar-expand-lg navbar-light">
+      <nav id="top" className="navbar navbar-expand-lg navbar-light">
         <div className="container">
           <Link className="navbar-brand" href="/">
             <Image
               src="/images/logo.png"
-              width={75}
-              height={75}
+              width={100}
+              height={100}
               alt="logo"
               priority
             />
