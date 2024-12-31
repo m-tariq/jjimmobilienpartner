@@ -121,10 +121,13 @@ body {
 /* Layout Elements */
 .gallery-img {
   border-radius: 10px;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 .fav {
   position: absolute;
-  width: 175px;
+  width: 200px;
   bottom: -1px;
   left: -13px;
 }
@@ -170,6 +173,10 @@ body {
 /* Footer Styles */
 .bg-grey {
   background: var(--color-bg-grey);
+}
+.achievement {
+  box-shadow: 0px 4px 4px 0px #00000040;
+  padding-bottom: 6rem;
 }
 
 .footer .desc, 
@@ -246,12 +253,12 @@ body {
     height: 390px;
   }
   .big-img {
-    width: 110%;
-    margin-left: -10px;
-    margin-top: -7px;
-    height: auto;
+    width: calc(100% - -50px);
+    margin-left: -15px;
+    margin-top: -10px;
+    height: 500px !important;
     object-fit: cover;
-  }
+}
   /* .space {
     padding-top: 200px;
   } */
@@ -292,12 +299,25 @@ body {
     border-left: 5px solid #000;
     padding-left: 15px;
   }
-  .top-img {
+  .top-img1, .top-img2 {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
   }
   .bottom-img {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
+  }
+  .top-img1 {
+    margin-top: -110px;
+  }
+  .top-img2 {
+    margin-top: -150px;
+  }
+  .gallery-img {
+    height: 260px;
+  }
+  .bg-light-blue {
+    height: 650px;
+    overflow: hidden;
   }
 }

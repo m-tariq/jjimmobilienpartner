@@ -45,8 +45,8 @@ export default function Header() {
   return (
     <header>
       <nav id="top" className="navbar navbar-expand-lg navbar-light">
-        <div className="container">
-          <Link className="navbar-brand" href="/">
+        <div className="container-fluid">
+          <Link className="navbar-brand ms-md-5" href="/">
             <Image
               src="/images/logo.png"
               width={100}
@@ -145,7 +145,7 @@ export default function Header() {
             >
               Contact Us
             </Link>
-            <Link href="tel:009191829229" className="text-dark">
+            <Link href="tel:009191829229" className="text-dark me-md-3">
             <FontAwesomeIcon className="ms-4" icon={faPhone} />
             </Link>
           </div>

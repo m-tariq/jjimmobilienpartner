@@ -9,7 +9,7 @@ export default function LandingPage() {
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-7 py-5">
-              <h4 className="mb-md-4 mb-2 font-raleway fw-600 display-4 ms-md-5">Herzlichen Willkommen</h4>
+              <h4 className="mb-md-4 mb-2 font-raleway fw-600 display-4 ms-md-5 mt-md-5">Herzlichen Willkommen</h4>
               <h4 className="font-raleway fw-600 display-5 ms-md-5 bl">Ihr <span className="d-md-block">Immobilienpartner</span> aus Wuppertal</h4>
               <div className='space'></div>
               <Image 
@@ -23,16 +23,16 @@ export default function LandingPage() {
             </div>
             <div className="col-md-5">
               <div className="row">
-                <div className="col-6 me-md-3">
+                <div className="col-6 me-md-4">
                   <Image 
-                    src="/images/1.jpg" 
-                    className="w-100 h-auto top-img mb-4 gallery-img"
+                    src="/images/1.png" 
+                    className="w-100h-auto top-img1 mb-4 gallery-img"
                     alt="Image 1"
                     width={400}
                     height={300}
                   />
                   <Image 
-                    src="/images/2.jpg" 
+                    src="/images/2.png" 
                     className="big-img bottom-img gallery-img"
                     alt="Image 2"
                     width={400}
@@ -41,22 +41,22 @@ export default function LandingPage() {
                 </div>
                 <div className="col-md-5 col-6">
                   <Image 
-                    src="/images/3.jpg" 
-                    className="w-100 h-auto top-img mb-4 gallery-img"
+                    src="/images/33.jpeg" 
+                    className="w-100h-auto top-img2 mb-4 gallery-img"
                     alt="Image 3"
                     width={400}
                     height={300}
                   />
                   <Image 
-                    src="/images/4.jpg" 
-                    className="w-100 h-auto gallery-img mb-4"
+                    src="/images/44.jpeg" 
+                    className="w-100h-auto gallery-img mb-4"
                     alt="Image 1 repeat"
                     width={400}
                     height={300}
                   />
                   <Image 
-                    src="/images/5.jpg" 
-                    className="w-100 h-auto bottom-img gallery-img"
+                    src="/images/5.png" 
+                    className="w-100h-auto bottom-img gallery-img"
                     alt="Image 3 repeat"
                     width={400}
                     height={300}
@@ -101,7 +101,7 @@ export default function LandingPage() {
         </div>
       </section> */}
 
-      <section className="achievement py-5 my-md-5">
+      <section className="achievement pt-5 mt-md-5">
         <h4 className="text-light-blue fw-bold font-raleway fs-6 text-center">Überblick</h4>
         <h4 className="font-poppins fs-1 fw-600 text-center">Meine Leistungen</h4>
         <div className="container mt-5">
@@ -175,11 +175,11 @@ export default function LandingPage() {
       </section>
 
       <section className="contact-banner py-5">
-        <div className="my-md-5">
-          <h4 className="text-white display-5 w-md-75 font-inter fw-600 mx-auto mb-4 pb-md-2">
+        <div className="my-md-5 container">
+          <h4 className="text-white display-5 text-md-center font-inter fw-600 mx-md-5 mb-4 pb-md-2">
             Wir freuen uns auf ihre Kontaktaufnahme und gute Geschäfte!
           </h4>
-          <p className="text-white fs-4 w-md-75 font-lato fw-normal mx-auto mb-4 pb-md-2 px-md-5 text-md-center">
+          <p className="text-white fs-4 mx-md-5 font-lato fw-normal mb-4 pb-md-2 px-md-5 text-md-center">
             Hier gelangen Sie zu unserem Kontaktformular, wo Sie uns unkompliziertund unverbindlich die Kerndaten zu Ihrem Objekt übermitteln können.
           </p>
           <div className='d-flex gap-5 justify-content-center flex-wrap'>
