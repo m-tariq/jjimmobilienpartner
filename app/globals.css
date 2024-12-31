@@ -119,6 +119,9 @@ body {
 }
 
 /* Layout Elements */
+.header-btn {
+  padding: 10px 16px !important;
+}
 .gallery-img {
   border-radius: 10px;
   object-fit: cover;
