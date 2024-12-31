@@ -29,14 +29,14 @@ export default function LandingPage() {
               <div className="row">
                 <div className="col-6 me-md-4">
                   <Image 
-                    src="/images/1.png" 
+                    src="/images/banner-img1.png" 
                     className="w-100h-auto top-img1 mb-4 gallery-img"
                     alt="Image 1"
                     width={400}
                     height={300}
                   />
                   <Image 
-                    src="/images/2.png" 
+                    src="/images/banner-img2.png" 
                     className="big-img bottom-img gallery-img"
                     alt="Image 2"
                     width={400}
@@ -45,21 +45,21 @@ export default function LandingPage() {
                 </div>
                 <div className="col-md-5 col-6">
                   <Image 
-                    src="/images/33.jpeg" 
+                    src="/images/banner-img3.jpeg" 
                     className="w-100h-auto top-img2 mb-4 gallery-img"
                     alt="Image 3"
                     width={400}
                     height={300}
                   />
                   <Image 
-                    src="/images/44.jpeg" 
+                    src="/images/banner-img4.jpeg" 
                     className="w-100h-auto gallery-img mb-4"
                     alt="Image 1 repeat"
                     width={400}
                     height={300}
                   />
                   <Image 
-                    src="/images/5.png" 
+                    src="/images/banner-img5.png" 
                     className="w-100h-auto bottom-img gallery-img"
                     alt="Image 3 repeat"
                     width={400}
@@ -160,7 +160,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className='my-5'>
+      <section className='my-5 pb-md-5'>
         <div className='container'>
           <div className='d-flex flex-wrap justify-content-between align-items-center gap-3 p-5 bg-sky-blue rounded-4'>
             <div className='ms-lg-5'>
@@ -178,7 +178,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="contact-banner py-5">
+      <section className="contact-banner py-5 pt-md-5">
         <div className="my-md-5 container">
           <h4 className="text-white display-5 text-md-center font-inter fw-600 mx-md-5 mb-4 pb-md-2">
             Wir freuen uns auf ihre Kontaktaufnahme und gute Geschäfte!
