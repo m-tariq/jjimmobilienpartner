@@ -253,8 +253,8 @@ body {
     height: 390px;
   }
   .big-img {
-    width: calc(100% - -50px);
-    margin-left: -15px;
+    width: calc(100% - -55px);
+    margin-left: -25px;
     margin-top: -10px;
     height: 500px !important;
     object-fit: cover;
