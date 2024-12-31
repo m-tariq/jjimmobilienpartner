@@ -86,15 +86,15 @@ export default function Service() {
     ))}
 
     <section className="contact-banner py-5">
-      <div className="my-md-5">
-        <h4 className="text-white display-5 w-md-75 font-inter fw-600 mx-auto mb-4 pb-md-2">
+      <div className="my-md-5 container">
+        <h4 className="text-white display-5 text-md-center font-inter fw-600 mx-md-5 mb-4 pb-md-2">
           Möchten Sie uns eine Immobilie vorstellen?
         </h4>
-        <p className="text-white fs-4 w-md-75 font-lato fw-normal mx-auto mb-4 pb-md-2 px-md-5 text-md-center">
+        <p className="text-white fs-4 font-lato fw-normal mx-md-5 mb-4 pb-md-2 px-md-5 text-md-center">
           Hier gelangen Sie zu unserem Kontaktformular, wo Sie uns unkompliziertund unverbindlich die Kerndaten zu Ihrem Objekt übermitteln können.
         </p>
-        <Link href="/contact" className='text-decoration-none text-dark'>
-          <button type="button" className="btn bg-white px-5 d-md-block mx-auto fs-6 fw-600 font-raleway">
+        <Link href="/contact-us" className='text-decoration-none text-dark'>
+          <button type="button" className="btn bg-white px-5 py-3 d-md-block mx-auto fs-6 fw-600 font-raleway">
             Contact Us
           </button>
         </Link>

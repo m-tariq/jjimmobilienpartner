@@ -49,8 +49,8 @@ export default function Header() {
           <Link className="navbar-brand ms-md-5" href="/">
             <Image
               src="/images/logo.png"
-              width={100}
-              height={100}
+              width={130}
+              height={130}
               alt="logo"
               priority
             />
@@ -146,7 +146,14 @@ export default function Header() {
               Contact Us
             </Link>
             <Link href="tel:009191829229" className="text-dark me-md-3">
-            <FontAwesomeIcon className="ms-4" icon={faPhone} />
+            {/* <FontAwesomeIcon className="ms-4" icon={faPhone} /> */}
+            <Image
+              src="/images/phone.png"
+              width={73}
+              height={39}
+              alt="logo"
+              priority
+            />
             </Link>
           </div>
         </div>
