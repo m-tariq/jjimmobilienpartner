@@ -27,7 +27,7 @@ export default function Purchase() {
             Ankaufsprofil für Wohn- & Geschäftsimmobilien
               </h4>
               <p className="font-inter fw-400 fs-5 mb-md-4 mb-3 text-justify">
-              Unser Fokus liegt auf Mehrfamilienhäusern, Wohn- und Geschäftshäusern sowieWohnanlagen. Besonders interessieren wir uns für Wohnimmobilien in Wuppertal und der näheren Umgebung.
+                Unser Fokus liegt auf Mehrfamilienhäusern, Wohn- und Geschäftshäusern sowie Wohnanlagen. Besonders interessieren wir uns für Wohnimmobilien in Wuppertal und der näheren Umgebung.
               </p>
               <p className="font-inter fw-400 fs-5 mb-md-4 mb-3 text-justify">
               Auch Immobilien in B- oder C-Lagen sowie Objekte mit Sanierungsbedarf stellen für uns kein Hindernis dar. Im Gegenteil, wir erkennen das Potenzial solcher Immobilien und sind stets an deren Entwicklung interessiert.
