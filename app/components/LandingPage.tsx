@@ -108,7 +108,7 @@ export default function LandingPage() {
       <section className="achievement pt-5 mt-md-5">
         <h4 className="text-light-blue fw-bold font-raleway fs-6 text-center">Überblick</h4>
         <h4 className="font-poppins fs-1 fw-600 text-center">Meine Leistungen</h4>
-        <div className="container mt-5">
+        <div className="container-lg mt-5">
           <div className="box">
             {[
               {
@@ -161,7 +161,7 @@ export default function LandingPage() {
       </section>
 
       <section className='my-5 pb-md-5'>
-        <div className='container'>
+        <div className='container-lg'>
           <div className='d-flex flex-wrap justify-content-between align-items-center gap-3 p-5 bg-sky-blue rounded-4'>
             <div className='ms-lg-5'>
               <h4 className='font-poppins fw-500 fs-3'>Wir kaufen Ihre Immobilie</h4>
@@ -179,7 +179,7 @@ export default function LandingPage() {
       </section>
 
       <section className="contact-banner py-5 pt-md-5">
-        <div className="my-md-5 container">
+        <div className="my-md-5 container-lg">
           <h4 className="text-white display-5 text-md-center font-inter fw-600 mx-md-5 mb-4 pb-md-2">
             Wir freuen uns auf ihre Kontaktaufnahme und gute Geschäfte!
           </h4>
