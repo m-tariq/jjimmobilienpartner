@@ -49,8 +49,9 @@ export default function Header() {
           <Link className="navbar-brand ms-md-5" href="/">
             <Image
               src="/images/logo.png"
+              className="object-fit-cover"
               width={130}
-              height={130}
+              height={100}
               alt="logo"
               priority
             />

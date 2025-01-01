@@ -137,7 +137,8 @@ body {
   height: 246px;
   object-fit: cover;
   bottom: -1px;
-  left: 0;
+  left: auto;
+  margin-left: -12px;
 }
 
 /* Grid Layout */
