@@ -10,6 +10,7 @@ import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 type DropdownState = {
   leistungen: boolean;
   ankauf: boolean;
+  per:boolean;
 };
 
 type DropdownKey = keyof DropdownState;
@@ -32,7 +33,8 @@ export default function Header() {
 
   const [dropdowns, setDropdowns] = useState<DropdownState>({
     leistungen: false,
-    ankauf: false
+    ankauf: false,
+    per: false
   });
 
   const toggleDropdown = (key: DropdownKey) => {
@@ -123,13 +125,36 @@ export default function Header() {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link 
                   className={`nav-link ${isClient && isActive('/person') ? 'active' : ''}`}
                   href="/person"
                 >
                   PERSON
                 </Link>
+              </li> */}
+              <li className={`nav-item dropdown ${isClient && isActive('/person') ? 'active' : ''}`}>
+                <div
+                  className={`nav-link dropdown-tog gle ${isClient && isActive('/person') ? 'active' : ''}`}
+                  role="button"
+                  onClick={() => toggleDropdown('per')}
+                  style={{ cursor: 'pointer' }}
+                >
+                  PERSON <FontAwesomeIcon icon={faAngleDown} className="ps-1" />
+                </div>
+                <ul
+                  className={`dropdown-menu ${dropdowns.per ? 'show' : ''}`}
+                >
+                  <li>
+                    <Link 
+                      className={`dropdown-item ${isClient && isActive('/person') ? 'active' : ''}`}
+                      href="/person"
+                      onClick={() => toggleDropdown('per')}
+                    >
+                      PERSON
+                    </Link>
+                  </li>
+                </ul>
               </li>
               <li className="nav-item">
                 <Link 
