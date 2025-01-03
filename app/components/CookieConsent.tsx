@@ -11,11 +11,11 @@ const CookieConsent = () => {
     }
   }, []);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      require('bootstrap/dist/js/bootstrap.bundle.min.js');
-    }
-  }, []);
+//   useEffect(() => {
+//     if (typeof window !== 'undefined') {
+//       require('bootstrap/dist/js/bootstrap.bundle.min.js');
+//     }
+//   }, []);
 
   const handleAccept = () => {
     localStorage.setItem('cookieConsent', 'true');
