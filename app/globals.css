@@ -103,6 +103,9 @@ body {
 .text-light-blue {
   color: var(--color-light-blue);
 }
+.text-sky-blue {
+  color: var(--color-sky-blue);
+}
 .bg-sky-blue {
   background: var(--color-sky-blue);
 }
@@ -116,6 +119,9 @@ body {
 /* Text Styles */
 .text-justify {
   text-align: justify;
+}
+.ls-2 {
+  letter-spacing: 2px !important;
 }
 
 /* Layout Elements */
