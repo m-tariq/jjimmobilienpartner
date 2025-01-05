@@ -64,7 +64,7 @@ export default function Purchase() {
             <div className="col-md-5">
               <Image
                 className="img-corner-round mt-3 mt-md-0"
-                src="/images/img1.jpeg"
+                src="/images/img3.png"
                 alt="img1"
                 width={500}
                 height={300}

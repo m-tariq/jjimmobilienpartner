@@ -6,8 +6,8 @@ export default function Service() {
   return <>
     <section className="page-title py-5">
       <div className="container my-md-5 py-md-3">
-        <h4 className="text-white display-4 font-raleway fw-bold mb-4 pb-md-2">Our Services</h4>
-        <p className="text-white fs-md-5 fs-6 w-md-50 font-lato fw-normal">Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <h4 className="text-white display-4 font-raleway fw-bold mb-4 pb-md-2">Meine Leistungen</h4>
+        <p className="text-white fs-md-5 fs-6 w-md-50 font-lato fw-normal text-justify">JJ Immobilienpartner setzt sich für eine vertrauensvolle Zusammenarbeit, maßgeschneiderte Lösungen und eine effiziente Unterstützung bei allen Anliegen rund um Ihre Immobilie oder Portfolio ein. Als Einzelunternehmer lege ich besonderen Wert auf persönliche Betreuung und ein starkes Netzwerk.</p>
       </div>
     </section>
 
