@@ -229,7 +229,7 @@ body {
 .polkadot {
   width: 200px;
     height: 105px;
-    background-image: radial-gradient(circle, #000 2px, #0000 0);
+    background-image: radial-gradient(circle, #000 3px, #0000 0);
     background-size: 1.5rem 1.5rem;
     background-repeat: round;
 }
