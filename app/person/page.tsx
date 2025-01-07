@@ -7,13 +7,13 @@ export default function About() {
     <>
     <section className="page-title py-5">
       <div className="container my-md-5 py-md-3">
-        <h4 className="text-white display-4 font-raleway fw-bold mb-4 pb-md-2">About Us</h4>
+        <h4 className="text-white display-4 font-raleway fw-bold mb-4 pb-md-2">Über mich</h4>
         <p className="text-white fs-md-5 fs-6 w-md-50 font-lato fw-normal">Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
       </div>
     </section>
 
-    <section className="pt-5">
-         <div className="container mt-md-5">
+    <section className="py-5">
+         <div className="container my-md-5">
           <div className="row">
             <div className="col-md-5">
               <Image 
@@ -27,17 +27,23 @@ export default function About() {
             </div>
             <div className="col-md-1"></div>
             <div className="col-md-6 my-auto">
-            <h4 className="text-light-blue fw-bold font-raleway fs-5">About Us</h4>
-              <h4 className="font-poppins fw-600 display-6 mb-md-4 mb-3">The JAN JACOBI GROUP</h4>
-              <p className="font-poppins fw-normal fs-5 mb-md-4 mb-3 text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
-              <h6 className="font-poppins fw-500 fs-4 mb-3">Our Mission</h6>
-              <p className="font-poppins fw-normal fs-5 mb-md-4 mb-3 text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
+            <h4 className="text-light-blue fw-bold font-raleway fs-5">Über mich</h4>
+              <h4 className="font-poppins fw-600 display-6 mb-md-5 mb-3">JJ Immobilienpartner</h4>
+              <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">Mein Name ist Jan Jacobi, Gründer von Jan Jacobi Immobilienpartner.</p>
+              <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">Als gebürtiger Wuppertaler mit über 10 Jahren Erfahrung im Immobiliengeschäft, habe ich mich auf den Aufbau und die Optimierung von Immobilienportfolios sowie auf die professionelle Betreuung von Immobilienverkäufen und -käufen spezialisiert. </p>
+              <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">Durch meine langjährige Tätigkeit als Hausverwalter und Portfolio-Manager für vermögensverwaltende Gesellschaften sowie die aktive Beteiligung am Ankauf und der Verwaltung von Immobilien innerhalb des Familienbestands und dem Portfolioaufbau unserer Kunden, habe ich fundierte Kenntnisse und ein breites Netzwerk aufgebaut und konnte umfassende Expertise in verschiedenen Bereichen der Immobilienwirtschaft gewinnen.</p>
+              <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">Meine Philosophie basiert auf einer vertrauensvollen Partnerschaft, bei der ich auf Ihre individuellen Projekte und Anliegen eingehe. Es ist mir besonders wichtig, Sie bei der Umsetzung Ihrer Wünsche und Ziele mit maßgeschneiderten Lösungen und flexibler Unterstützung zu begleiten.</p>
+              <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">Unser Ziel ist es, Ihnen maßgeschneiderte Lösungen für die erfolgreiche Umsetzung Ihrer Immobilienprojekte zu bieten, Ihre Immobilienbestände durch gezielte Optimierung langfristig zu stärken und den Wert Ihrer Objekte zu steigern.</p>
+              <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">Ich habe eine starke Passion für die Immobilienbranche und fokussiere mich auf dieEntwicklung und Optimierung von Immobilienprojekten und setze mich mit Begeisterung dafür ein, den größtmöglichen Wert für meine Kunden zu schaffen.</p>
+              <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">Ich freue mich auf den Austausch und darauf, Sie bei Ihren Immobilienprojekten zu unterstützen.</p>
+              <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">Meine Leistungsübersicht und das Ankaufsprofil finden Sie hier:    XXX      XXXX</p>
+              <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">Kontaktieren können Sie mich gerne per Mail oder direkt hier:   XXX </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-5">
+      {/* <section className="py-5">
       <div className="container my-md-5">
         <h4 className="font-raleway fw-500 display-6 text-center">Partner</h4>
         <div className='d-flex justify-content-evenly flex-wrap flex-wrap gap-3 mt-md-5 mt-3'>
@@ -78,7 +84,7 @@ export default function About() {
         />
         </div>
       </div>
-      </section>
+      </section> */}
     </>
   );
 }

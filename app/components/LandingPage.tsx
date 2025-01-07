@@ -9,11 +9,15 @@ export default function LandingPage() {
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-7 py-5">
-              <h4 className="mb-md-4 mb-2 font-raleway fw-600 display-4 text-md-center">Herzlichen Willkommen</h4>
-              <h4 className="font-raleway fw-600 display-5 w-md-75 mx-auto bl">Ihr Immobilien <span className="d-md-block">partner</span> aus Wuppertal</h4>
+              <h4 className="mb-2 font-raleway fw-600 display-4 ms-md-5 mt-md-5 pt-md-5">Herzlichen Willkommen</h4>
+              <div className="subtitle font-raleway fw-600 display-5 ms-md-5 bl mt-1">
+                <p>Ihr</p>
+                <p>Immobilienpartner</p>
+                <p>aus Wuppertal</p>
+              </div>
               <div className='space'></div>
               <Image 
-                className="fav h-auto d-xl-block d-none" 
+                className="fav d-xl-block d-none" 
                 src="/images/fav.png" 
                 alt="Favorite"
                 width={200}
@@ -23,17 +27,17 @@ export default function LandingPage() {
             </div>
             <div className="col-md-5">
               <div className="row">
-                <div className="col-6 me-md-3">
+                <div className="col-6 me-md-4">
                   <Image 
-                    src="/images/1.jpg" 
-                    className="w-100 h-auto rounded mb-4"
+                    src="/images/banner-img1.png" 
+                    className="w-100h-auto top-img1 mb-4 gallery-img"
                     alt="Image 1"
                     width={400}
                     height={300}
                   />
                   <Image 
-                    src="/images/2.jpg" 
-                    className="big-img rounded"
+                    src="/images/banner-img2.png" 
+                    className="big-img bottom-img gallery-img"
                     alt="Image 2"
                     width={400}
                     height={300}
@@ -41,22 +45,22 @@ export default function LandingPage() {
                 </div>
                 <div className="col-md-5 col-6">
                   <Image 
-                    src="/images/3.jpg" 
-                    className="w-100 h-auto rounded mb-4"
+                    src="/images/banner-img3.jpeg" 
+                    className="w-100h-auto top-img2 mb-4 gallery-img"
                     alt="Image 3"
                     width={400}
                     height={300}
                   />
                   <Image 
-                    src="/images/4.jpg" 
-                    className="w-100 h-auto rounded mb-4"
+                    src="/images/banner-img4.jpeg" 
+                    className="w-100h-auto gallery-img mb-4"
                     alt="Image 1 repeat"
                     width={400}
                     height={300}
                   />
                   <Image 
-                    src="/images/5.jpg" 
-                    className="w-100 h-auto rounded"
+                    src="/images/banner-img5.png" 
+                    className="w-100h-auto bottom-img gallery-img"
                     alt="Image 3 repeat"
                     width={400}
                     height={300}
@@ -101,10 +105,10 @@ export default function LandingPage() {
         </div>
       </section> */}
 
-      <section className="achievement py-5 my-md-5">
+      <section className="achievement pt-5 mt-md-5">
         <h4 className="text-light-blue fw-bold font-raleway fs-6 text-center">Überblick</h4>
         <h4 className="font-poppins fs-1 fw-600 text-center">Meine Leistungen</h4>
-        <div className="container mt-5">
+        <div className="container-lg mt-5">
           <div className="box">
             {[
               {
@@ -156,30 +160,30 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className='my-5'>
-        <div className='container'>
+      <section className='my-5 pb-md-5'>
+        <div className='container-lg'>
           <div className='d-flex flex-wrap justify-content-between align-items-center gap-3 p-5 bg-sky-blue rounded-4'>
             <div className='ms-lg-5'>
               <h4 className='font-poppins fw-500 fs-3'>Wir kaufen Ihre Immobilie</h4>
               <p className='font-poppins fw-normal fs-6 mb-0'>We only work with the best companies around the globe</p>
             </div>
-            <Link href=""
+            <Link href="/ankaufsprofil"
               className="btn bg-yellow rounded-3 py-3 px-4 font-poppins fw-500 me-lg-5">
                 Ankaufsprofil
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
+                <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
                 </svg>
                 </Link>
           </div>
         </div>
       </section>
 
-      <section className="contact-banner py-5">
-        <div className="my-md-5">
-          <h4 className="text-white display-5 w-md-75 font-inter fw-600 mx-auto mb-4 pb-md-2">
+      <section className="contact-banner py-5 pt-md-5">
+        <div className="my-md-5 container-lg">
+          <h4 className="text-white display-5 text-md-center font-inter fw-600 mx-md-5 mb-4 pb-md-2">
             Wir freuen uns auf ihre Kontaktaufnahme und gute Geschäfte!
           </h4>
-          <p className="text-white fs-4 w-md-75 font-lato fw-normal mx-auto mb-4 pb-md-2 px-md-5 text-md-center">
+          <p className="text-white fs-4 mx-md-5 font-lato fw-normal mb-4 pb-md-2 px-md-5 text-md-center">
             Hier gelangen Sie zu unserem Kontaktformular, wo Sie uns unkompliziertund unverbindlich die Kerndaten zu Ihrem Objekt übermitteln können.
           </p>
           <div className='d-flex gap-5 justify-content-center flex-wrap'>

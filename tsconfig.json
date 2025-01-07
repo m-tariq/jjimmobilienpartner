@@ -32,7 +32,7 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "types.d.ts"
-  ],
+, "app/api/sendEmail/route.js"  ],
   "exclude": [
     "node_modules"
   ]

@@ -4,12 +4,13 @@ import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 // Define types for dropdown state
 type DropdownState = {
   leistungen: boolean;
   ankauf: boolean;
+  per:boolean;
 };
 
 type DropdownKey = keyof DropdownState;
@@ -32,7 +33,8 @@ export default function Header() {
 
   const [dropdowns, setDropdowns] = useState<DropdownState>({
     leistungen: false,
-    ankauf: false
+    ankauf: false,
+    per: false
   });
 
   const toggleDropdown = (key: DropdownKey) => {
@@ -44,13 +46,14 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="navbar navbar-expand-lg navbar-light">
-        <div className="container">
-          <Link className="navbar-brand" href="/">
+      <nav id="top" className="navbar navbar-expand-lg navbar-light">
+        <div className="container-fluid">
+          <Link className="navbar-brand ms-md-5" href="/">
             <Image
               src="/images/logo.png"
-              width={75}
-              height={75}
+              className="object-fit-cover"
+              width={130}
+              height={100}
               alt="logo"
               priority
             />
@@ -122,13 +125,36 @@ export default function Header() {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link 
                   className={`nav-link ${isClient && isActive('/person') ? 'active' : ''}`}
                   href="/person"
                 >
                   PERSON
                 </Link>
+              </li> */}
+              <li className={`nav-item dropdown ${isClient && isActive('/person') ? 'active' : ''}`}>
+                <div
+                  className={`nav-link dropdown-tog gle ${isClient && isActive('/person') ? 'active' : ''}`}
+                  role="button"
+                  onClick={() => toggleDropdown('per')}
+                  style={{ cursor: 'pointer' }}
+                >
+                  PERSON <FontAwesomeIcon icon={faAngleDown} className="ps-1" />
+                </div>
+                <ul
+                  className={`dropdown-menu ${dropdowns.per ? 'show' : ''}`}
+                >
+                  <li>
+                    <Link 
+                      className={`dropdown-item ${isClient && isActive('/person') ? 'active' : ''}`}
+                      href="/person"
+                      onClick={() => toggleDropdown('per')}
+                    >
+                      PERSON
+                    </Link>
+                  </li>
+                </ul>
               </li>
               <li className="nav-item">
                 <Link 
@@ -141,12 +167,19 @@ export default function Header() {
             </ul>
             <Link 
               href="/contact-us" 
-              className={`btn ${isClient && isActive('/contact-us') ? 'btn-secondary' : 'btn-outline-dark'}`}
+              className={`btn font-raleway fw-600 fs-6 header-btn ${isClient && isActive('/contact-us') ? 'btn-secondary' : 'btn-outline-dark'}`}
             >
               Contact Us
             </Link>
-            <Link href="tel:009191829229" className="text-dark">
-            <FontAwesomeIcon className="ms-4" icon={faPhone} />
+            <Link href="tel:009191829229" className="text-dark me-md-3">
+            {/* <FontAwesomeIcon className="ms-4" icon={faPhone} /> */}
+            <Image
+              src="/images/phone.png"
+              width={73}
+              height={39}
+              alt="logo"
+              priority
+            />
             </Link>
           </div>
         </div>

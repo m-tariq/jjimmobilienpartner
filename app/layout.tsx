@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BootstrapProvider } from './providers';
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import CookieConsent from './components/CookieConsent';
 
 // Load Google Fonts
 const inter = Inter({
@@ -74,6 +75,8 @@ export default function RootLayout({
         <BootstrapProvider>
           <Header />
           {children}
+      <CookieConsent />
+
           <Footer />
         </BootstrapProvider>
       </body>

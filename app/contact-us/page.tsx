@@ -1,8 +1,12 @@
 "use client";
-import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons';
-import { useState, ChangeEvent, FormEvent } from 'react';
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faPhone,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
+import { useState, ChangeEvent, FormEvent } from "react";
 
 interface FormData {
   name: string;
@@ -11,37 +15,100 @@ interface FormData {
   message: string;
 }
 
+interface FormStatus {
+  type: "success" | "error" | null;
+  message: string;
+}
+
+const Alert = ({
+  type,
+  message,
+}: {
+  type: "success" | "error";
+  message: string;
+}) => {
+  const bgColor = type === "success" ? "alert-success" : "alert-danger";
+  return (
+    <div className={`alert ${bgColor} mb-4`} role="alert">
+      {message}
+    </div>
+  );
+};
 
 export default function Contact() {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [formStatus, setFormStatus] = useState<FormStatus>({
+    type: null,
+    message: "",
+  });
+
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
+    setFormStatus({ type: null, message: "" });
+
+    // Split the name field into first name and last name
+    const nameParts = formData.name.trim().split(" ");
+    const payload = {
+      fname: nameParts[0] || "",
+      lname: nameParts.slice(1).join(" ") || "",
+      email: formData.email,
+      phone: formData.phone,
+      content: formData.message,
+    };
+
     try {
-      // Add your form submission logic here
-      console.log('Form data:', formData);
-      // Reset form after submission
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Something went wrong");
+      }
+
+      setFormStatus({
+        type: "success",
+        message: data.message,
+      });
+
+      // Reset form after successful submission
       setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: ''
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
       });
     } catch (error) {
-      console.error('Error submitting form:', error);
+      setFormStatus({
+        type: "error",
+        message:
+          error instanceof Error ? error.message : "Failed to send message",
+      });
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -76,44 +143,21 @@ export default function Contact() {
                 Our opening and Accessibility times:
               </p>
               <div className="divider mt-3 mb-5"></div>
-              <p className='font-raleway fw-normal fs-6 mb-0'>If you have urgent concerns, you can call us at any time or speak to us in the mailbox and provide a telephone number. We will get back as soon as possible.</p>
-              <p className='font-raleway fw-600 fs-6'>Visits must always be arranged on time.</p>
-              {/* <div className="d-flex align-items-center gap-3 mt-4">
-                <div className="icon">
-                  <FontAwesomeIcon icon={faEnvelope} />
-                </div>
-                <div>
-                  <h6 className="font-poppins fw-600 fs-6">Email</h6>
-                  <h6 className="font-poppins fw-500 fs-6 mb-0">
-                    Info@janjacobi.com
-                  </h6>
-                </div>
-              </div>
-              <div className="d-flex align-items-center gap-3 mt-4">
-                <div className="icon">
-                  <FontAwesomeIcon icon={faPhone} />
-                </div>
-                <div>
-                  <h6 className="font-poppins fw-600 fs-6">Phone Number</h6>
-                  <h6 className="font-poppins fw-500 fs-6 mb-0">
-                    +00 9191829229, +00 9191829229
-                  </h6>
-                </div>
-              </div>
-              <div className="d-flex align-items-center gap-3 mt-4">
-                <div className="icon">
-                  <FontAwesomeIcon icon={faLocationDot} />
-                </div>
-                <div>
-                  <h6 className="font-poppins fw-600 fs-6">Address</h6>
-                  <h6 className="font-poppins fw-500 fs-6 mb-0">
-                    JAN JACOBI , Herderstr, 4th 42327 ,Wuppertal
-                  </h6>
-                </div>
-              </div> */}
+              <p className="font-raleway fw-normal fs-6 mb-0">
+                If you have urgent concerns, you can call us at any time or
+                speak to us in the mailbox and provide a telephone number. We
+                will get back as soon as possible.
+              </p>
+              <p className="font-raleway fw-600 fs-6">
+                Visits must always be arranged on time.
+              </p>
             </div>
             <div className="col-md-1"></div>
             <div className="col-md-5 bg-white rounded-3 py-3">
+              {formStatus.type && (
+                <Alert type={formStatus.type} message={formStatus.message} />
+              )}
+
               <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <label className="form-label font-poppins fw-600 fs-6">
@@ -126,6 +170,7 @@ export default function Contact() {
                     onChange={handleChange}
                     className="form-control py-2"
                     placeholder="Your Name"
+                    required
                   />
                 </div>
                 <div className="mb-4">
@@ -139,6 +184,7 @@ export default function Contact() {
                     onChange={handleChange}
                     className="form-control py-2"
                     placeholder="creativelayers088@gmail.com"
+                    required
                   />
                 </div>
                 <div className="mb-4">
@@ -158,12 +204,12 @@ export default function Contact() {
                   <label className="form-label font-poppins fw-600 fs-6">
                     Nachricht (Pflichtfeld)
                   </label>
-                  
-                  <textarea 
+                  <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     className="form-control"
+                    required
                   ></textarea>
                 </div>
                 <h6 className="font-poppins fw-normal fs-6 my-4">
@@ -175,8 +221,9 @@ export default function Contact() {
                 <button
                   type="submit"
                   className="btn bg-light-blue text-white d-block rounded-3 py-2 w-100"
+                  disabled={isLoading}
                 >
-                  Absenden
+                  {isLoading ? "Wird gesendet..." : "Absenden"}
                 </button>
               </form>
             </div>
@@ -184,44 +231,67 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className='py-5 my-md-5'>
-        <h4 className='font-inter fw-bold text-center mb-5'>Meine Kontaktinformationen</h4>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-md-4'>
-              <div className='d-flex justify-content-center'>
+      <section className="py-5 my-md-5">
+        <h4 className="font-inter fw-bold text-center mb-5">
+          Meine Kontaktinformationen
+        </h4>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-4">
+              <div className="d-flex justify-content-center">
                 <div className="icon">
                   <FontAwesomeIcon icon={faEnvelope} />
                 </div>
               </div>
-              <h6 className="font-poppins fw-600 fs-6 text-center mt-3 mb-4">Email</h6>
-              <h6 className="font-poppins fw-500 fs-6 mb-0 text-center">Info@jj-immobilienpartner.de</h6>
+              <h6 className="font-poppins fw-600 fs-6 text-center mt-3 mb-4">
+                Email
+              </h6>
+              <h6 className="font-poppins fw-500 fs-6 mb-0 text-center">
+                Info@jj-immobilienpartner.de
+              </h6>
             </div>
-            <div className='col-md-4'>
-              <div className='d-flex justify-content-center'>
+            <div className="col-md-4">
+              <div className="d-flex justify-content-center">
                 <div className="icon">
                   <FontAwesomeIcon icon={faPhone} />
                 </div>
               </div>
-              <h6 className="font-poppins fw-600 fs-6 text-center mt-3 mb-4">Telefon</h6>
-              <h6 className="font-poppins fw-500 fs-6 mb-0 text-center mb-1">+00 9191829229</h6>
-              <h6 className="font-poppins fw-500 fs-6 mb-0 text-center">+00 9191829229</h6>
+              <h6 className="font-poppins fw-600 fs-6 text-center mt-3 mb-4">
+                Telefon
+              </h6>
+              <h6 className="font-poppins fw-500 fs-6 mb-0 text-center mb-1">
+                +00 9191829229
+              </h6>
+              <h6 className="font-poppins fw-500 fs-6 mb-0 text-center">
+                +00 9191829229
+              </h6>
             </div>
-            <div className='col-md-4'>
-              <div className='d-flex justify-content-center'>
+            <div className="col-md-4">
+              <div className="d-flex justify-content-center">
                 <div className="icon">
                   <FontAwesomeIcon icon={faLocationDot} />
                 </div>
               </div>
-              <h6 className="font-poppins fw-600 fs-6 text-center mt-3 mb-4">Adresse</h6>
-              <h6 className="font-poppins fw-500 fs-6 mb-0 text-center">JAN JACOBI<br/> Herderstr. 4 <br/>42327 Wuppertal</h6>
+              <h6 className="font-poppins fw-600 fs-6 text-center mt-3 mb-4">
+                Adresse
+              </h6>
+              <h6 className="font-poppins fw-500 fs-6 mb-0 text-center">
+                JAN JACOBI
+                <br /> Herderstr. 4 <br />
+                42327 Wuppertal
+              </h6>
             </div>
           </div>
         </div>
       </section>
 
       <section>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.084288986628!2d7.077071475251197!3d51.23594253049968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8d6b66433f8a3%3A0x6845367a2943e56d!2sHerderstra%C3%9Fe%204%2C%2042327%20Wuppertal%2C%20Germany!5e0!3m2!1sen!2s!4v1735138137159!5m2!1sen!2s" width="100%" height="450" loading="lazy"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.084288986628!2d7.077071475251197!3d51.23594253049968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8d6b66433f8a3%3A0x6845367a2943e56d!2sHerderstra%C3%9Fe%204%2C%2042327%20Wuppertal%2C%20Germany!5e0!3m2!1sen!2s!4v1735138137159!5m2!1sen!2s"
+          width="100%"
+          height="450"
+          loading="lazy"
+        ></iframe>
       </section>
     </>
   );
