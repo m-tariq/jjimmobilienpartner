@@ -85,7 +85,7 @@ export default function Purchase() {
             Hier gelangen Sie zu unserem Kontaktformular, wo Sie uns unkompliziert und unverbindlich die Kerndaten zu Ihrem Objekt übermitteln können.
           </p>
           <Link href="/contact-us" className="text-decoration-none text-dark">
-            <button type="button" className="btn bg-white px-5 py-3 d-md-block mx-auto fs-6 fw-600 font-raleway">
+            <button type="button" className="btn bg-white contact-btn d-md-block mx-auto fs-6 fw-600 font-raleway rounded-2">
               Kontakiere uns
             </button>
           </Link>
