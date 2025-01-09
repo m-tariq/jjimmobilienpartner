@@ -206,9 +206,9 @@ body {
   text-decoration: none;
 }
 
-.footer .contact-btn {
-  width: 17rem;
-  padding: 12px 0px;
+.contact-btn {
+  width: 228px;
+  height: 56px;
 }
 
 /* Image Styles */
