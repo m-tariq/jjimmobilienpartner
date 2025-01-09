@@ -17,8 +17,10 @@ export default function Purchase() {
       <section className="pt-5">
         <div className="container mt-md-5">
           <div className="row">
-            <div className="col-md-6 my-auto">
-              <h4 className="font-poppins fw-600 display-5 mb-md-4 mb-3">Ankaufsprofil für Wohn- & Geschäftsimmobilien</h4>
+            <div className="col-md-12 my-auto">
+              <h4 className="font-poppins fw-600 display-5 mb-2">Ankaufsprofil</h4>
+              <h4 className="font-poppins fw-600 display-5 mb-2">für Wohn- &</h4>
+              <h4 className="font-poppins fw-600 display-5 mb-md-4 mb-2">Geschäftsimmobilien</h4>
               <p className="font-inter fw-400 fs-5 mb-md-4 mb-3 text-justify">
                 Unser Fokus liegt auf Mehrfamilienhäusern, Wohn- und Geschäftshäusern sowie Wohnanlagen. Besonders interessieren wir uns für Wohnimmobilien in Wuppertal und der näheren Umgebung.
               </p>
@@ -45,7 +47,7 @@ export default function Purchase() {
                 <span className="font-inter fw-bold fs-5">Gewerbe: </span>
                 Gewerbeimmobilien sind nicht unser primärer Fokus, werden aber ebenfalls geprüft.
               </p>
-              <p className="font-inter fw-400 fs-5 mb-md-4 mb-3 text-justify">
+              <p className="font-inter fw-400 fs-5 mb-0 text-justify">
                 <span className="font-inter fw-bold fs-5">Angebotspreis: </span>
                 Für ein erstes indikatives Kaufpreisangebot benötigen wir vorab nur die wichtigsten Kerndaten der Immobilie.
               </p>
@@ -60,7 +62,7 @@ export default function Purchase() {
                 Kontaktieren können Sie mich gerne per Mail oder direkt hier:
               </p>
             </div>
-            <div className="col-md-1"></div>
+            {/* <div className="col-md-1"></div>
             <div className="col-md-5">
               <Image
                 className="img-corner-round mt-3 mt-md-0"
@@ -69,7 +71,7 @@ export default function Purchase() {
                 width={500}
                 height={300}
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

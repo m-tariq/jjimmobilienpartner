@@ -107,7 +107,7 @@ export default function Footer() {
                 Email: info@jj-immobilienpartner.de
               </p>
               <p className="link font-nunito fs-6 fw-500">
-              Telefonnummer: +49 000 000000
+              Telefonnummer: +49 173 2725720
               </p>
             </div>
           </div>

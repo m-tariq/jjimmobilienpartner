@@ -79,7 +79,7 @@ export default function Header() {
                   HOME
                 </Link>
               </li>
-              <li className={`nav-item dropdown ${isClient && isActive('/leistungen') ? 'active' : ''}`}>
+              {/* <li className={`nav-item dropdown ${isClient && isActive('/leistungen') ? 'active' : ''}`}>
                 <div
                   className={`nav-link dropdown-tog gle ${isClient && isActive('/leistungen') ? 'active' : ''}`}
                   role="button"
@@ -101,61 +101,32 @@ export default function Header() {
                     </Link>
                   </li>
                 </ul>
-              </li>
-              <li className={`nav-item dropdown ${isClient && isActive('/ankaufsprofil') ? 'active' : ''}`}>
-                <div
-                  className={`nav-link dropdown-tog gle ${isClient && isActive('/ankaufsprofil') ? 'active' : ''}`}
-                  role="button"
-                  onClick={() => toggleDropdown('ankauf')}
-                  style={{ cursor: 'pointer' }}
+              </li> */}
+              <li className="nav-item">
+                <Link 
+                  className={`nav-link ${isClient && isActive('/leistungen') ? 'active' : ''}`}
+                  href="/leistungen"
                 >
-                  ANKAUFSPROFIL <FontAwesomeIcon icon={faAngleDown} className="ps-1" />
-                </div>
-                <ul
-                  className={`dropdown-menu ${dropdowns.ankauf ? 'show' : ''}`}
-                >
-                  <li>
-                    <Link 
-                      className={`dropdown-item ${isClient && isActive('/ankaufsprofil') ? 'active' : ''}`}
-                      href="/ankaufsprofil"
-                      onClick={() => toggleDropdown('ankauf')}
-                    >
-                      ANKAUFSPROFIL
-                    </Link>
-                  </li>
-                </ul>
+                  LEISTUNGEN
+                </Link>
               </li>
-              {/* <li className="nav-item">
+              <li className="nav-item">
+                <Link 
+                  className={`nav-link ${isClient && isActive('/ankaufsprofil') ? 'active' : ''}`}
+                  href="/ankaufsprofil"
+                >
+                  ANKAUFSPROFIL
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link 
                   className={`nav-link ${isClient && isActive('/person') ? 'active' : ''}`}
                   href="/person"
                 >
                   PERSON
                 </Link>
-              </li> */}
-              <li className={`nav-item dropdown ${isClient && isActive('/person') ? 'active' : ''}`}>
-                <div
-                  className={`nav-link dropdown-tog gle ${isClient && isActive('/person') ? 'active' : ''}`}
-                  role="button"
-                  onClick={() => toggleDropdown('per')}
-                  style={{ cursor: 'pointer' }}
-                >
-                  PERSON <FontAwesomeIcon icon={faAngleDown} className="ps-1" />
-                </div>
-                <ul
-                  className={`dropdown-menu ${dropdowns.per ? 'show' : ''}`}
-                >
-                  <li>
-                    <Link 
-                      className={`dropdown-item ${isClient && isActive('/person') ? 'active' : ''}`}
-                      href="/person"
-                      onClick={() => toggleDropdown('per')}
-                    >
-                      PERSON
-                    </Link>
-                  </li>
-                </ul>
               </li>
+              
               <li className="nav-item">
                 <Link 
                   className={`nav-link ${isClient && isActive('/impressum') ? 'active' : ''}`}
@@ -169,7 +140,7 @@ export default function Header() {
               href="/contact-us" 
               className={`btn font-raleway fw-600 fs-6 header-btn ${isClient && isActive('/contact-us') ? 'btn-secondary' : 'btn-outline-dark'}`}
             >
-              Contact Us
+              Kontakt
             </Link>
             <Link href="tel:009191829229" className="text-dark me-md-3">
             {/* <FontAwesomeIcon className="ms-4" icon={faPhone} /> */}

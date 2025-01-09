@@ -36,8 +36,8 @@ export default function About() {
               <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">Unser Ziel ist es, Ihnen maßgeschneiderte Lösungen für die erfolgreiche Umsetzung Ihrer Immobilienprojekte zu bieten, Ihre Immobilienbestände durch gezielte Optimierung langfristig zu stärken und den Wert Ihrer Objekte zu steigern.</p>
               <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">Ich habe eine starke Passion für die Immobilienbranche und fokussiere mich auf dieEntwicklung und Optimierung von Immobilienprojekten und setze mich mit Begeisterung dafür ein, den größtmöglichen Wert für meine Kunden zu schaffen.</p>
               <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">Ich freue mich auf den Austausch und darauf, Sie bei Ihren Immobilienprojekten zu unterstützen.</p>
-              <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">Meine Leistungsübersicht und das Ankaufsprofil finden Sie hier:    XXX      XXXX</p>
-              <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">Kontaktieren können Sie mich gerne per Mail oder direkt hier:   XXX </p>
+              <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">Meine Leistungsübersicht und das Ankaufsprofil finden Sie hier: +49 173 2725720</p>
+              <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">Kontaktieren können Sie mich gerne per Mail oder direkt hier: info@jj-immobilienpartner.de</p>
             </div>
           </div>
         </div>
