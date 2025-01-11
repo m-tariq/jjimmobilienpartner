@@ -153,7 +153,7 @@ export default function Contact() {
               </p>
             </div> */}
             {/* <div className="col-md-4"></div> */}
-            <div className="contact-form bg-white rounded-3 py-3">
+            <div className="contact-form bg-white rounded-3 py-3 slide-left">
               {formStatus.type && (
                 <Alert type={formStatus.type} message={formStatus.message} />
               )}
