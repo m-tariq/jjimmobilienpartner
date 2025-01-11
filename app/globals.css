@@ -247,7 +247,7 @@ body {
   animation-duration: 500ms;
 }
 .slide-left {
-  animation: 3s slide-left;
+  animation: 2s linear slide-left;
 }
 @keyframes slide-left {
   from {
