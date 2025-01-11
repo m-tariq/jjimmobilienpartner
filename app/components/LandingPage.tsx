@@ -9,7 +9,7 @@ export default function LandingPage() {
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-7 py-5">
-              <h4 className="mb-2 font-raleway fw-600 display-4 ms-md-5 mt-md-5 pt-md-5">Herzlichen Willkommen</h4>
+              <h4 className="mb-2 font-raleway fw-600 display-4 ms-md-5 mt-md-5 pt-md-5">Herzlich Willkommen</h4>
               <div className="subtitle font-raleway fw-600 display-5 ms-md-5 bl mt-1">
                 <p>Ihr</p>
                 <p>Immobilienpartner</p>
