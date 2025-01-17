@@ -8,6 +8,7 @@ export async function POST(req, res) {
   try {
     const { fname, lname, email, phone, content } = await req.json();
 
+    console.log(res);
     // Validate required fields
     if (!fname || !email || !content) {
       return new Response(

@@ -9,7 +9,7 @@ export default function LandingPage() {
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-7 py-5">
-              <h4 className="mb-2 font-raleway fw-600 display-4 ms-md-5 mt-md-5 pt-md-5">Herzlichen Willkommen</h4>
+              <h4 className="mb-2 font-raleway fw-600 display-4 ms-md-5 mt-md-5 pt-md-5">Herzlich Willkommen</h4>
               <div className="subtitle font-raleway fw-600 display-5 ms-md-5 bl mt-1">
                 <p>Ihr</p>
                 <p>Immobilienpartner</p>
@@ -187,10 +187,10 @@ export default function LandingPage() {
             Hier gelangen Sie zu unserem Kontaktformular, wo Sie uns unkompliziertund unverbindlich die Kerndaten zu Ihrem Objekt übermitteln können.
           </p>
           <div className='d-flex gap-5 justify-content-center flex-wrap'>
-          <Link href="/contact-us" className="btn bg-white px-5 fs-6 fw-600 font-raleway rounded-1">
+          <Link href="/contact-us" className="d-flex justify-content-center align-items-center btn bg-white contact-btn fs-6 fw-600 font-raleway rounded-2">
             Kontakt
           </Link>
-          <Link href="" className="btn bg-white px-5 fs-6 fw-600 font-raleway rounded-1">
+          <Link href="" className="d-flex justify-content-center align-items-center btn bg-white contact-btn fs-6 fw-600 font-raleway rounded-2">
             Direkt Mail
           </Link>
           </div>

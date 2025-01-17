@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -143,7 +142,7 @@ export default function Contact() {
       <section className="page-title py-5">
         <div className="container my-md-5 py-md-3">
           <h4 className="text-white display-4 font-raleway fw-bold mb-4 pb-md-2">
-            Contact Us
+          Kontakt
           </h4>
           <p className="text-white fs-md-5 fs-6 w-md-50 font-lato fw-normal">
             Lorem Ipsum has been the industry&apos;s standard dummy text ever
@@ -156,7 +155,7 @@ export default function Contact() {
       <section className="py-5 bg-grey">
         <div className="container my-md-5">
           <div className="row">
-            <div className="col-md-6 my-auto">
+            {/* <div className="col-md-6 my-auto">
               <Image
                 className="object-fit-cover"
                 src="/images/logo.png"
@@ -177,9 +176,9 @@ export default function Contact() {
               <p className="font-raleway fw-600 fs-6">
                 Visits must always be arranged on time.
               </p>
-            </div>
-            <div className="col-md-1"></div>
-            <div className="col-md-5 bg-white rounded-3 py-3">
+            </div> */}
+            {/* <div className="col-md-4"></div> */}
+            <div className="contact-form bg-white rounded-3 py-3 slide-left">
               {formStatus.type && (
                 <Alert type={formStatus.type} message={formStatus.message} />
               )}
@@ -265,6 +264,7 @@ export default function Contact() {
                 </button>
               </form>
             </div>
+            {/* <div className="col-md-4"></div> */}
           </div>
         </div>
       </section>
