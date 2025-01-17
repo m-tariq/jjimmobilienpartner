@@ -9,7 +9,7 @@ export async function POST(req, res) {
     const { fname, lname, email, phone, content } = await req.json();
 
     // Validate required fields
-    if (!fname || !lname || !email || !content) {
+    if (!fname || !email || !content) {
       return new Response(
         JSON.stringify({
           message: "Missing required fields",

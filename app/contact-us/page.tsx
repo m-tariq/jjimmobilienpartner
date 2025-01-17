@@ -49,6 +49,14 @@ export default function Contact() {
     message: "",
   });
 
+  const isFormValid = () => {
+    return (
+      formData.name.trim() !== "" &&
+      formData.email.trim() !== "" &&
+      formData.message.trim() !== ""
+    );
+  };
+
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -64,7 +72,6 @@ export default function Contact() {
     setIsLoading(true);
     setFormStatus({ type: null, message: "" });
 
-    // Split the name field into first name and last name
     const nameParts = formData.name.trim().split(" ");
     const payload = {
       fname: nameParts[0] || "",
@@ -75,7 +82,7 @@ export default function Contact() {
     };
 
     try {
-      const response = await fetch("/api/sendEmail", {
+      const response = await fetch("/api/sendEmail1", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -83,10 +90,27 @@ export default function Contact() {
         body: JSON.stringify(payload),
       });
 
+      // Handle non-JSON responses
+      const contentType = response.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        setIsLoading(false);
+        setFormStatus({
+          type: "error",
+          message:
+            "Server error: Something went wrong, please try again later.",
+        });
+        return; // Exit early
+      }
+
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.message || "Something went wrong");
+        setIsLoading(false);
+        setFormStatus({
+          type: "error",
+          message: data?.message || "Failed to send message",
+        });
+        return; // Exit early
       }
 
       setFormStatus({
@@ -105,7 +129,9 @@ export default function Contact() {
       setFormStatus({
         type: "error",
         message:
-          error instanceof Error ? error.message : "Failed to send message",
+          error instanceof Error
+            ? error.message
+            : "An unexpected error occurred. Please try again later.",
       });
     } finally {
       setIsLoading(false);
@@ -220,10 +246,22 @@ export default function Contact() {
                 </h6>
                 <button
                   type="submit"
-                  className="btn bg-light-blue text-white d-block rounded-3 py-2 w-100"
-                  disabled={isLoading}
+                  className={`btn text-white d-block rounded-3 py-2 w-100 ${
+                    isFormValid() ? "bg-light-blue" : "bg-light-blue opacity-50"
+                  }`}
                 >
-                  {isLoading ? "Wird gesendet..." : "Absenden"}
+                  {isLoading ? (
+                    <>
+                      <span
+                        className="spinner-border spinner-border-sm me-2"
+                        role="status"
+                        aria-hidden="true"
+                      ></span>
+                      Wird gesendet...
+                    </>
+                  ) : (
+                    "Absenden"
+                  )}
                 </button>
               </form>
             </div>
