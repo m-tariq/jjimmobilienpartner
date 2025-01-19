@@ -36,7 +36,7 @@ export default function LandingPage() {
                     height={300}
                   />
                   <Image 
-                    src="/images/banner-img2.png" 
+                    src="/images/banner-img5.png" 
                     className="big-img bottom-img gallery-img"
                     alt="Image 2"
                     width={400}
@@ -59,7 +59,7 @@ export default function LandingPage() {
                     height={300}
                   />
                   <Image 
-                    src="/images/banner-img5.png" 
+                    src="/images/banner-img2.png" 
                     className="w-100h-auto bottom-img gallery-img"
                     alt="Image 3 repeat"
                     width={400}

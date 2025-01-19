@@ -173,13 +173,16 @@ body {
   width: 100px;
   right: 20px;
 }
-.cards:nth-child(1) .key {
+/* .cards:nth-child(1) .key {
+  filter: brightness(0.1);
+} */
+.cards .key {
   filter: brightness(0.1);
 }
 
 /* Banner and Background Images */
 .contact-banner, .page-title {
-  background-image: linear-gradient(90deg, rgb(0 0 0 / 68%), rgb(0 0 0 / 26%)), url('/images/home-contact-bg.jpg');
+  background-image: linear-gradient(90deg, rgb(0 0 0 / 68%), rgb(0 0 0 / 26%)), url('/images/home-contact-bg.png');
   background-position: center;
   background-size: cover;
 }
@@ -361,7 +364,7 @@ body {
     height: 760px;
     overflow: hidden;
   }
-  .contact-banner, .page-title {
+  /* .contact-banner, .page-title {
     height: 438px;
-  }
+  } */
 }
