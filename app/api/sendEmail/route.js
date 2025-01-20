@@ -33,16 +33,15 @@ export async function POST(req, res) {
     }
 
     const transporter = nodemailer.createTransport({
-      host: "smtp.ionos.de",
-      port: 587,
-      secure: false,
+      host: "wp1035781.mail.server-he.de",
+      port: 465,
+      secure: true,
       auth: {
-        user: process.env.IONOS_EMAIL,
-        pass: process.env.IONOS_PASSWORD,
+        user: process.env.USER_NAME, // The exact username from the login form
+        pass: process.env.PASSWORD, // The exact password
       },
-      tls: {
-        rejectUnauthorized: false,
-      },
+      debug: true,
+      logger: true,
     });
 
     // Format the date
@@ -68,9 +67,9 @@ export async function POST(req, res) {
     const mailOptions = {
       from: {
         name: "Contact Form",
-        address: process.env.IONOS_EMAIL,
+        address: process.env.EMAIL,
       },
-      to: process.env.IONOS_EMAIL,
+      to: process.env.EMAIL,
       replyTo: email,
       subject: `New Contact Form Submission from ${fname} ${lname}`,
       html: generateEmailTemplate(emailData),

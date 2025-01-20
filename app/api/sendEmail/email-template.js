@@ -11,9 +11,8 @@ export const generateEmailTemplate = ({
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Contact Form Submission</title>
+      <title>JJ Immobilienpartner - Kontaktanfrage</title>
       <style>
-        /* Reset styles */
         * {
           margin: 0;
           padding: 0;
@@ -21,149 +20,104 @@ export const generateEmailTemplate = ({
         }
         
         body {
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-family: Arial, sans-serif;
           line-height: 1.6;
-          color: #2d3748;
-          background-color: #f7fafc;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
+          color: #333333;
+          background-color: #f5f5f5;
         }
   
-        /* Container styles */
         .container {
           max-width: 600px;
           margin: 0 auto;
           background-color: #ffffff;
-          border-radius: 8px;
-          overflow: hidden;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          border: 1px solid #e0e0e0;
         }
   
-        /* Header styles */
         .header {
-          background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
-          color: white;
-          padding: 32px 24px;
+          background-color: #003366;
+          padding: 24px;
           text-align: center;
+        }
+
+        .logo {
+          max-width: 200px;
+          margin-bottom: 16px;
         }
   
         .header h2 {
-          font-size: 24px;
-          font-weight: 600;
+          color: #ffffff;
+          font-size: 22px;
+          font-weight: 500;
           margin-bottom: 8px;
-          letter-spacing: -0.025em;
         }
   
-        .header p {
-          font-size: 16px;
-          opacity: 0.9;
-        }
-  
-        /* Content styles */
         .content {
           padding: 32px 24px;
-          background-color: white;
         }
   
         .section {
           margin-bottom: 24px;
           padding: 20px;
-          background-color: #f8fafc;
-          border-radius: 6px;
-          border: 1px solid #e2e8f0;
-        }
-  
-        .section:last-child {
-          margin-bottom: 0;
+          background-color: #ffffff;
+          border: 1px solid #e0e0e0;
         }
   
         .field {
           margin-bottom: 16px;
         }
   
-        .field:last-child {
-          margin-bottom: 0;
-        }
-  
         .label {
           font-size: 14px;
           font-weight: 600;
-          color: #64748b;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          margin-bottom: 4px;
+          color: #666666;
+          margin-bottom: 8px;
         }
   
         .value {
-          font-size: 16px;
-          color: #1e293b;
-          background-color: white;
-          padding: 12px;
+          font-size: 15px;
+          color: #333333;
+          line-height: 1.6;
+        }
+  
+        .contact-info {
+          background-color: #f8f8f8;
+          padding: 16px;
+          border-left: 4px solid #003366;
+        }
+
+        .message-box {
+          background-color: #ffffff;
+          padding: 20px;
+          border: 1px solid #e0e0e0;
           border-radius: 4px;
-          border: 1px solid #e2e8f0;
         }
   
-        .message-content {
-          white-space: pre-line;
-          line-height: 1.8;
-        }
-  
-        /* Divider */
-        .divider {
-          height: 1px;
-          background-color: #e2e8f0;
-          margin: 24px 0;
-        }
-  
-        /* Footer styles */
         .footer {
-          background-color: #f8fafc;
+          background-color: #f8f8f8;
           padding: 24px;
           text-align: center;
-          border-top: 1px solid #e2e8f0;
+          border-top: 1px solid #e0e0e0;
         }
   
         .timestamp {
-          font-size: 14px;
-          color: #64748b;
+          font-size: 13px;
+          color: #666666;
           margin-bottom: 12px;
         }
   
-        .copyright {
-          font-size: 14px;
-          color: #94a3b8;
+        .company-info {
+          font-size: 13px;
+          color: #666666;
+          line-height: 1.8;
         }
-  
-        /* Highlights and Badges */
-        .priority-badge {
-          display: inline-block;
-          padding: 4px 12px;
-          background-color: #818cf8;
-          color: white;
-          border-radius: 9999px;
-          font-size: 12px;
-          font-weight: 500;
-          margin-top: 8px;
-        }
-  
-        /* Responsive design */
+
         @media only screen and (max-width: 600px) {
           .container {
             width: 100%;
-            margin: 0;
-            border-radius: 0;
           }
-  
-          .header {
-            padding: 24px 16px;
-          }
-  
+          
           .content {
-            padding: 24px 16px;
-          }
-  
-          .section {
-            padding: 16px;
+            padding: 20px 16px;
           }
         }
       </style>
@@ -171,52 +125,46 @@ export const generateEmailTemplate = ({
     <body>
       <div class="container">
         <div class="header">
-          <h2>New Contact Inquiry</h2>
-          <p>A new message has been received through the contact form</p>
+          <h2>Neue Kontaktanfrage</h2>
         </div>
   
         <div class="content">
-          <!-- Contact Information Section -->
-          <div class="section">
+          <div class="section contact-info">
             <div class="field">
-              <div class="label">Contact Details</div>
+              <div class="label">Kontaktdetails</div>
               <div class="value">
-                <strong>${fname} ${lname}</strong>
-                ${phone ? `<br>📞 ${phone}` : ""}
-                <br>📧 ${email}
+                <strong>${fname} ${lname}</strong><br>
+                ${phone ? `Telefon: ${phone}<br>` : ""}
+                E-Mail: ${email}
               </div>
             </div>
           </div>
   
-          <!-- Message Content Section -->
           <div class="section">
             <div class="field">
-              <div class="label">Message Content</div>
-              <div class="value message-content">
+              <div class="label">Nachricht</div>
+              <div class="message-box">
                 ${content}
               </div>
             </div>
-          </div>
-  
-          <div class="priority-badge">
-            New Message
           </div>
         </div>
   
         <div class="footer">
           <div class="timestamp">
-            📅 Received on ${date}
+            Eingegangen am ${date}
           </div>
-          <div class="divider"></div>
-          <div class="copyright">
-            © ${new Date().getFullYear()} Your Company Name<br>
-            <small>This is an automated message. Please do not reply directly to this email.</small>
+          <div class="company-info">
+            JJ Immobilienpartner<br>
+            Jan Jacobi<br>
+            Immobilienverwaltung<br>
+            <small>Dies ist eine automatisierte Nachricht. Bitte antworten Sie nicht direkt auf diese E-Mail.</small>
           </div>
         </div>
       </div>
     </body>
   </html>
-  `;
+`;
 
 export const generatePlainTextEmail = ({
   fname,
@@ -226,20 +174,25 @@ export const generatePlainTextEmail = ({
   content,
   date,
 }) => `
-  NEW CONTACT FORM SUBMISSION
-  --------------------------
+  JJ IMMOBILIENPARTNER - NEUE KONTAKTANFRAGE
+  -----------------------------------------
   
-  CONTACT DETAILS
+  KONTAKTDETAILS
   --------------
   Name: ${fname} ${lname}
-  Email: ${email}
-  ${phone ? `Phone: ${phone}\n` : ""}
+  E-Mail: ${email}
+  ${phone ? `Telefon: ${phone}\n` : ""}
   
-  MESSAGE
-  -------
+  NACHRICHT
+  ---------
   ${content}
   
-  --------------------------
-  Sent on: ${date}
+  -----------------------------------------
+  Eingegangen am: ${date}
+  
+  JJ Immobilienpartner
   Jan Jacobi
+  Immobilienverwaltung
+  
+  Dies ist eine automatisierte Nachricht.
   `;

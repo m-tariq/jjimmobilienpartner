@@ -81,7 +81,7 @@ export default function Contact() {
     };
 
     try {
-      const response = await fetch("/api/sendEmail1", {
+      const response = await fetch("/api/sendEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -142,7 +142,7 @@ export default function Contact() {
       <section className="page-title py-5">
         <div className="container my-md-5 py-md-3">
           <h4 className="text-white display-4 font-raleway fw-bold mb-4 pb-md-2">
-          Kontakt
+            Kontakt
           </h4>
           <p className="text-white fs-md-5 fs-6 w-md-50 font-lato fw-normal">
             Lorem Ipsum has been the industry&apos;s standard dummy text ever
