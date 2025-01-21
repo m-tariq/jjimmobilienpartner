@@ -288,7 +288,7 @@ export default function Contact() {
                 Info@jj-immobilienpartner.de
               </h6>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4 my-5 my-md-0">
               <div className="d-flex justify-content-center">
                 <div className="icon">
                   <FontAwesomeIcon icon={faPhone} />
