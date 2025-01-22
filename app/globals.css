@@ -177,7 +177,8 @@ body {
   filter: brightness(0.1);
 } */
 .cards .key {
-  filter: brightness(0.1);
+  /* filter: brightness(0.1); */
+  mix-blend-mode: multiply;
 }
 
 /* Banner and Background Images */

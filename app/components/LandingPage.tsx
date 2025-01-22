@@ -113,27 +113,33 @@ export default function LandingPage() {
             {[
               {
                 title: "Anlagenberatung",
-                desc: "Strategische Begleitung bei anstehenden oder getätigten Investitionen für langfristige Stabilität und gesundes Wachstum"
+                desc: "Strategische Begleitung bei anstehenden oder getätigten Investitionen für langfristige Stabilität und gesundes Wachstum",
+                imagePath: "/images/1.svg"
               },
               {
                 title: "Immobilienmakler",
-                desc: "Seriöse Vermittlung und Vermarktung von Immobilien, abgestimmt auf Ihre Bedürfnisse."
+                desc: "Seriöse Vermittlung und Vermarktung von Immobilien, abgestimmt auf Ihre Bedürfnisse.",
+                imagePath: "/images/2.svg"
               },
               {
                 title: "Portfolioaufbau & Optimierung",
-                desc: "Individuelle Strategien zum Aufbau, zur Strukturierung und zur OptimierungIhres Immobilienportfolios für eine langfristige Wertsteigerung."
+                desc: "Individuelle Strategien zum Aufbau, zur Strukturierung und zur OptimierungIhres Immobilienportfolios für eine langfristige Wertsteigerung.",
+                imagePath: "/images/3.svg"
               },
               {
                 title: "Vermietung von Wohnraum und Gewerbeflächen",
-                desc: "Effiziente und nachhaltige Vermittlung mit Fokus auf Rentabilität und langfristige Wertschöpfung."
+                desc: "Effiziente und nachhaltige Vermittlung mit Fokus auf Rentabilität und langfristige Wertschöpfung.",
+                imagePath: "/images/4.svg"
               },
               {
                 title: "Sonderverwaltung & Auftragsvermittlung",
-                desc: "Professionelle und zuverlässige Betreuung bei der Planung und Umsetzung von Sanierungen, Renovierungen und Modernisierungen sowie Hausmeister-Service, Entrümpelung und Grünpflege."
+                desc: "Professionelle und zuverlässige Betreuung bei der Planung und Umsetzung von Sanierungen, Renovierungen und Modernisierungen sowie Hausmeister-Service, Entrümpelung und Grünpflege.",
+                imagePath: "/images/5.svg"
               },
               {
                 title: "Ankauf von Immobilien & Grundstücken",
-                desc: "Wir sind stets auf der Suche nach Immobilien für unseren eigenen Bestand. Eine diskrete Prüfung ist selbstverständlich."
+                desc: "Wir sind stets auf der Suche nach Immobilien für unseren eigenen Bestand. Eine diskrete Prüfung ist selbstverständlich.",
+                imagePath: "/images/6.svg"
               }
             ].map((card, index) => (
               <div key={index} className="cards p-3 border-0 bg-sky-blue-gradient position-relative">
@@ -144,8 +150,8 @@ export default function LandingPage() {
                 </Link> */}
                 <Image 
                   className="key h-auto" 
-                  src="/images/key.png" 
-                  alt="Key icon"
+                  src={card.imagePath}
+                  alt={card.title}
                   width={100}
                   height={50}
                 />
