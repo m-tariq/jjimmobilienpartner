@@ -85,9 +85,11 @@ body {
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
-  padding: 10px 20px !important;
+  padding: 10px !important;
 }
-
+.nav-item {
+  margin-right: 15px;
+}
 /* .navbar-light .navbar-nav .nav-link.active, 
 .navbar-light .navbar-nav .show>.nav-link {
   border-bottom: 1px solid;
