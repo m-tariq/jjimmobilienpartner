@@ -186,7 +186,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <label className="form-label font-poppins fw-600 fs-6">
-                    Vor- und Nachname
+                  Vorname
                   </label>
                   <input
                     type="text"
@@ -194,7 +194,21 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     className="form-control py-2"
-                    placeholder="Your Name"
+                    placeholder="Vorname"
+                    required
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="form-label font-poppins fw-600 fs-6">
+                  Nachname
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="form-control py-2"
+                    placeholder="Nachname"
                     required
                   />
                 </div>

@@ -288,16 +288,28 @@ body {
   animation-duration: 500ms;
 }
 .slide-left {
-  animation: 2s linear slide-left;
+  /* animation: 2s linear slide-left; */
+  animation-duration: 3s;
+  animation-name: slide-in;
 }
-@keyframes slide-left {
+@keyframes slide-in {
+  from {
+    translate: 150vw 0;
+    scale: 200% 1;
+  }
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+/* @keyframes slide-left {
   from {
     margin-right: 0%;
   }
   to {
     margin-right: 25%;
   }
-}
+} */
 .icon {
   background: #D9D9D9;
   width: 70px;
