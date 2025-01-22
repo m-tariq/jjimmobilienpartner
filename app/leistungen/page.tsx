@@ -70,7 +70,7 @@ export default function Service() {
             <div className="col-md-5">
               <Image
                 src="/images/service-img2.png"
-                className="img-corner-round mt-3 mt-md-0"
+                className="img-corner-round mb-4 mb-md-0"
                 width={130}
                 height={100}
                 alt=""
@@ -161,7 +161,7 @@ export default function Service() {
             <div className="col-md-5">
               <Image
                 src="/images/service-img4.png"
-                className="img-corner-round mt-3 mt-md-0"
+                className="img-corner-round mb-4 mb-md-0"
                 width={130}
                 height={100}
                 alt=""
@@ -251,7 +251,7 @@ export default function Service() {
             <div className="col-md-5">
               <Image
                 src="/images/service-img6.png"
-                className="img-corner-round mt-3 mt-md-0"
+                className="img-corner-round mb-4 mb-md-0"
                 width={130}
                 height={100}
                 alt=""

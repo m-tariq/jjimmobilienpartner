@@ -43,7 +43,7 @@ export default function Footer() {
                 Bridging connection between<br /> people and property.
               </p>
               {/* <p className="font-nunito fs-6 fw-bold">Follow us on : </p> */}
-              <div className="d-flex gap-3 justify-content-md-start justify-content-center">
+              <div className="d-flex gap-3 justify-content-md-start justify-content-center mb-3 mb-md-0">
               <Link
                 href=""
                 target="_blank"
