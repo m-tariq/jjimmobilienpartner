@@ -184,7 +184,9 @@ export default function Contact() {
               )}
 
               <form onSubmit={handleSubmit}>
-                <div className="mb-4">
+                <div className="row">
+                  <div className="col-md-6">
+                  <div className="mb-4">
                   <label className="form-label font-poppins fw-600 fs-6">
                   Vorname
                   </label>
@@ -198,7 +200,9 @@ export default function Contact() {
                     required
                   />
                 </div>
-                <div className="mb-4">
+                  </div>
+                  <div className="col-md-6">
+                  <div className="mb-4">
                   <label className="form-label font-poppins fw-600 fs-6">
                   Nachname
                   </label>
@@ -212,7 +216,11 @@ export default function Contact() {
                     required
                   />
                 </div>
-                <div className="mb-4">
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-md-6">
+                  <div className="mb-4">
                   <label className="form-label font-poppins fw-600 fs-6">
                     E-Mail
                   </label>
@@ -226,7 +234,9 @@ export default function Contact() {
                     required
                   />
                 </div>
-                <div className="mb-4">
+                  </div>
+                  <div className="col-md-6">
+                  <div className="mb-4">
                   <label className="form-label font-poppins fw-600 fs-6">
                     Telefonnummer
                   </label>
@@ -239,6 +249,10 @@ export default function Contact() {
                     placeholder="Your Number"
                   />
                 </div>
+                  </div>
+                </div>
+                
+                
                 <div className="mb-4">
                   <label className="form-label font-poppins fw-600 fs-6">
                     Nachricht (Pflichtfeld)
