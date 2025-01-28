@@ -114,32 +114,32 @@ export default function LandingPage() {
               {
                 title: "Anlagenberatung",
                 desc: "Strategische Begleitung bei anstehenden oder getätigten Investitionen für langfristige Stabilität und gesundes Wachstum",
-                imagePath: "/images/1.svg"
+                imagePath: "/images/service-icon1.png"
               },
               {
                 title: "Immobilienmakler",
                 desc: "Seriöse Vermittlung und Vermarktung von Immobilien, abgestimmt auf Ihre Bedürfnisse.",
-                imagePath: "/images/2.svg"
+                imagePath: "/images/service-icon2.png"
               },
               {
                 title: "Portfolioaufbau & Optimierung",
                 desc: "Individuelle Strategien zum Aufbau, zur Strukturierung und zur OptimierungIhres Immobilienportfolios für eine langfristige Wertsteigerung.",
-                imagePath: "/images/3.svg"
+                imagePath: "/images/service-icon3.png"
               },
               {
                 title: "Vermietung von Wohnraum und Gewerbeflächen",
                 desc: "Effiziente und nachhaltige Vermittlung mit Fokus auf Rentabilität und langfristige Wertschöpfung.",
-                imagePath: "/images/4.svg"
+                imagePath: "/images/service-icon4.png"
               },
               {
                 title: "Sonderverwaltung & Auftragsvermittlung",
                 desc: "Professionelle und zuverlässige Betreuung bei der Planung und Umsetzung von Sanierungen, Renovierungen und Modernisierungen sowie Hausmeister-Service, Entrümpelung und Grünpflege.",
-                imagePath: "/images/5.svg"
+                imagePath: "/images/service-icon5.png"
               },
               {
                 title: "Ankauf von Immobilien & Grundstücken",
                 desc: "Wir sind stets auf der Suche nach Immobilien für unseren eigenen Bestand. Eine diskrete Prüfung ist selbstverständlich.",
-                imagePath: "/images/6.svg"
+                imagePath: "/images/service-icon6.png"
               }
             ].map((card, index) => (
               <div key={index} className="cards p-3 border-0 bg-sky-blue-gradient position-relative">

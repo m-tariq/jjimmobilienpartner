@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Service() {
   return (
     <>
-      <section className="page-title py-5">
+      <section className="service-page-title py-5">
         <div className="container my-md-5 py-md-3">
           <h4 className="text-white display-4 font-raleway fw-bold mb-4 pb-md-2">
             Meine Leistungen
@@ -23,7 +23,7 @@ export default function Service() {
       <section className="py-5">
         <div className="container my-md-5">
           <div className="row">
-            <div className="col-md-5 my-auto">
+            <div className="col-md-5">
               <h4 className="font-poppins fw-600 display-6 mb-md-5 mb-3">
                 Anlagenberatung
               </h4>
@@ -50,13 +50,12 @@ export default function Service() {
               </p>
               {/* <button type="button" className="btn btn-outline-dark font-raleway fw-600 fs-6">Explore Service</button> */}
             </div>
-            <div className="col-md-2"></div>
-            <div className="col-md-5">
+            <div className="col-md-7 my-auto">
               <Image
-                src="/images/service-img1.png"
-                className="img-corner-round mt-3 mt-md-0"
-                width={130}
-                height={100}
+                src="/images/service-clr-icon1.png"
+                className="service-clr-icon mt-3 mt-md-0 d-block mx-auto"
+                width={356}
+                height={356}
                 alt=""
               />
             </div>
@@ -67,17 +66,16 @@ export default function Service() {
       <section className="py-5">
         <div className="container my-md-5">
           <div className="row">
-            <div className="col-md-5">
+            <div className="col-md-7 my-auto">
               <Image
-                src="/images/service-img2.png"
-                className="img-corner-round mb-4 mb-md-0"
-                width={130}
-                height={100}
+                src="/images/service-clr-icon2.png"
+                className="service-clr-icon mb-4 mb-md-0 d-block mx-auto"
+                width={369}
+                height={333}
                 alt=""
               />
             </div>
-            <div className="col-md-2"></div>
-            <div className="col-md-5 my-auto">
+            <div className="col-md-5">
               <h4 className="font-poppins fw-600 display-6 mb-md-4 mb-3">
                 Portfolioaufbau & Optimierung
               </h4>
@@ -105,7 +103,7 @@ export default function Service() {
       <section className="py-5">
         <div className="container my-md-5">
           <div className="row">
-            <div className="col-md-5 my-auto">
+            <div className="col-md-5">
               <h4 className="font-poppins fw-600 display-6 mb-md-4 mb-3">
                 Immobilienmakler
               </h4>
@@ -141,13 +139,12 @@ export default function Service() {
               </p>
               {/* <button type="button" className="btn btn-outline-dark font-raleway fw-600 fs-6">Explore Service</button> */}
             </div>
-            <div className="col-md-2"></div>
-            <div className="col-md-5">
+            <div className="col-md-7 my-auto">
               <Image
-                src="/images/service-img3.png"
-                className="img-corner-round mt-3 mt-md-0"
-                width={130}
-                height={100}
+                src="/images/service-clr-icon3.png"
+                className="service-clr-icon mt-3 mt-md-0 d-block mx-auto"
+                width={364}
+                height={341}
                 alt=""
               />
             </div>
@@ -158,17 +155,16 @@ export default function Service() {
       <section className="py-5">
         <div className="container my-md-5">
           <div className="row">
-            <div className="col-md-5">
+            <div className="col-md-7 my-auto">
               <Image
-                src="/images/service-img4.png"
-                className="img-corner-round mb-4 mb-md-0"
-                width={130}
-                height={100}
+                src="/images/service-clr-icon4.png"
+                className="service-clr-icon mb-4 mb-md-0 d-block mx-auto"
+                width={314}
+                height={356}
                 alt=""
               />
             </div>
-            <div className="col-md-2"></div>
-            <div className="col-md-5 my-auto">
+            <div className="col-md-5">
               <h4 className="font-poppins fw-600 display-6 mb-md-4 mb-3">
                 Ankauf von Immobilien & Grundstücken
               </h4>
@@ -202,7 +198,7 @@ export default function Service() {
       <section className="py-5">
         <div className="container my-md-5">
           <div className="row">
-            <div className="col-md-5 my-auto">
+            <div className="col-md-5">
               <h4 className="font-poppins fw-600 display-6 mb-md-4 mb-3">
                 Vermietung von Wohnraum und Gewerbeflächen
               </h4>
@@ -231,13 +227,12 @@ export default function Service() {
               </p>
               {/* <button type="button" className="btn btn-outline-dark font-raleway fw-600 fs-6">Explore Service</button> */}
             </div>
-            <div className="col-md-2"></div>
-            <div className="col-md-5">
+            <div className="col-md-7 my-auto">
               <Image
-                src="/images/service-img5.png"
-                className="img-corner-round mt-3 mt-md-0"
-                width={130}
-                height={100}
+                src="/images/service-clr-icon5.png"
+                className="service-clr-icon mt-3 mt-md-0 d-block mx-auto"
+                width={331}
+                height={389}
                 alt=""
               />
             </div>
@@ -248,17 +243,16 @@ export default function Service() {
       <section className="py-5">
         <div className="container my-md-5">
           <div className="row">
-            <div className="col-md-5">
+            <div className="col-md-7 my-auto">
               <Image
-                src="/images/service-img6.png"
-                className="img-corner-round mb-4 mb-md-0"
-                width={130}
-                height={100}
+                src="/images/service-clr-icon6.png"
+                className="service-clr-icon mb-4 mb-md-0 d-block mx-auto"
+                width={377}
+                height={379}
                 alt=""
               />
             </div>
-            <div className="col-md-2"></div>
-            <div className="col-md-5 my-auto">
+            <div className="col-md-5">
               <h4 className="font-poppins fw-600 display-6 mb-md-4 mb-3">
                 Sonderverwaltung & Auftragsvermittlungen
               </h4>
