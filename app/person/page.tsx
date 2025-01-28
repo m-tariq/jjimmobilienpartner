@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function About() {
   return (
     <>
-      <section className="page-title py-5">
+      <section className="about-page-title py-5">
         <div className="container my-md-5 py-md-3">
           <h4 className="text-white display-4 font-raleway fw-bold mb-4 pb-md-2">
             Über mich
@@ -24,7 +24,7 @@ export default function About() {
             <div className="col-md-5">
               <Image
                 className="img-corner-round mt-3 mt-md-0"
-                src="/images/img1.jpeg"
+                src="/images/about-img.jpg"
                 alt="img1"
                 width={500}
                 height={300}

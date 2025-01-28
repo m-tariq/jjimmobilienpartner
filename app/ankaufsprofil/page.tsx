@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Purchase() {
   return (
     <>
-      <section className="page-title py-5">
+      <section className="purchase-page-title py-5">
         <div className="container my-md-5 py-md-3">
           <h4 className="text-white display-4 font-raleway fw-bold mb-4 pb-md-2">Ankaufsprofil</h4>
           <p className="text-white fs-md-5 fs-6 w-md-50 font-lato fw-normal">

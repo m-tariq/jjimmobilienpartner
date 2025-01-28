@@ -229,6 +229,16 @@ body {
   background-position: center;
   background-size: cover;
 }
+.purchase-page-title {
+  background-image: linear-gradient(90deg, rgb(0 0 0 / 68%), rgb(0 0 0 / 26%)), url('/images/purchase-page-title-bg.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.about-page-title {
+  background-image: linear-gradient(90deg, rgb(0 0 0 / 68%), rgb(0 0 0 / 26%)), url('/images/about-page-title-bg.jpg');
+  background-position: center;
+  background-size: cover;
+}
 .big-img {
   width: 100%;
   height: auto;
