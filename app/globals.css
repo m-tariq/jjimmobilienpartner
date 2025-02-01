@@ -216,6 +216,7 @@ body {
 .cards .key {
   /* filter: brightness(0.1); */
   mix-blend-mode: multiply;
+  width: 75px;
 }
 
 /* Banner and Background Images */
@@ -284,7 +285,10 @@ body {
   object-fit: cover;
   border-radius: 10px;
 }
-
+.service-clr-icon {
+  width: 200px;
+  height: auto;
+}
 .polkadot {
   width: 200px;
     height: 105px;
@@ -377,10 +381,10 @@ body {
     width: 300px;
     height: 350px;
   }
-  .service-clr-icon {
+  /* .service-clr-icon {
     width: 300px;
     height: 300px;
-  }
+  } */
   .img-double {
     width: 250px;
     height: 300px;
@@ -433,7 +437,7 @@ body {
     height: 760px;
     overflow: hidden;
   }
-  /* .contact-banner, .page-title {
+  .contact-banner, .page-title, .service-page-title, .purchase-page-title, .about-page-title {
     height: 438px;
-  } */
+  }
 }
