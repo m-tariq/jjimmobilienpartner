@@ -6,6 +6,7 @@ export default function Purchase() {
           <h4 className="display-4 font-raleway fw-bold pb-md-2">
             Impressum
           </h4>
+          <img src="/images/impressum.png"/>
       </div>
       
       <div className="container">

@@ -6,6 +6,7 @@ export default function Datenschutz() {
           <h4 className="display-4 font-raleway fw-bold pb-md-2">
           Datenschutzerklärung
           </h4>
+          <img src="/images/datenschutz.png"/>
       </div>
       <div className="container">
         <div className="row">
