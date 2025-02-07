@@ -5,7 +5,6 @@ export default function Purchase() {
     <>
       <div className="container my-5 py-md-3">
         <h4 className="display-4 font-raleway fw-bold pb-md-2">Impressum</h4>
-        <Image src="/images/impressum.png" alt="impressum-image" />
       </div>
 
       <div className="container">
@@ -30,11 +29,24 @@ export default function Purchase() {
             </div>
             <p>
               Im Falle von Abweichungen zwischen der deutschen und der
-              englischen Fassung hat die deutsche Fassung Vorrang.
+              englischen Fassung hat die deutsche Fassung Vorrang.
             </p>
           </div>
 
           <div className="col-md-4"></div>
+        </div>
+        <div className="d-flex justify-content-end">
+          <div
+            style={{ position: "relative", width: "300px", height: "200px" }}
+          >
+            <Image
+              src="/images/impressum.png"
+              alt="Impressum"
+              fill
+              style={{ objectFit: "contain" }}
+              priority
+            />
+          </div>
         </div>
       </div>
     </>
