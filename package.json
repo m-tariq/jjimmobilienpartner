@@ -16,6 +16,7 @@
     "@nextui-org/react": "^2.4.8",
     "@popperjs/core": "^2.11.8",
     "@types/nodemailer": "^6.4.17",
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
     "framer-motion": "^11.11.11",
     "lucide-react": "^0.456.0",
@@ -26,6 +27,7 @@
     "react-dom": "18"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/bootstrap": "^5.2.10",
     "@types/node": "20.17.9",
     "@types/react": "18.3.16",
