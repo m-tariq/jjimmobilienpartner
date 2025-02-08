@@ -362,7 +362,7 @@ export default function Service() {
               type="button"
               className="btn bg-white contact-btn d-md-block mx-auto fs-6 fw-600 font-raleway rounded-2"
             >
-              Contact Us
+              Kontakt
             </button>
           </Link>
         </div>
