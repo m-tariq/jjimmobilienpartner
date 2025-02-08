@@ -12,6 +12,7 @@ export default function Service() {
       once: false,
       mirror: true,
       easing: "ease-out-cubic",
+      anchorPlacement: "center-bottom",
     });
   }, []);
 
@@ -72,7 +73,7 @@ export default function Service() {
               data-aos-mirror="true"
             >
               <Image
-                src="/images/service-clr-icon1.png"
+                src="/images/service-icon1.png"
                 className="service-clr-icon mt-3 mt-md-0 d-block mx-auto"
                 width={356}
                 height={356}
@@ -92,7 +93,7 @@ export default function Service() {
               data-aos-mirror="true"
             >
               <Image
-                src="/images/service-clr-icon2.png"
+                src="/images/service-icon3.png"
                 className="service-clr-icon mb-4 mb-md-0 d-block mx-auto"
                 width={369}
                 height={333}
@@ -177,7 +178,7 @@ export default function Service() {
               data-aos-mirror="true"
             >
               <Image
-                src="/images/service-clr-icon3.png"
+                src="/images/service-icon2.png"
                 className="service-clr-icon mt-3 mt-md-0 d-block mx-auto"
                 width={364}
                 height={341}
@@ -197,7 +198,7 @@ export default function Service() {
               data-aos-mirror="true"
             >
               <Image
-                src="/images/service-clr-icon4.png"
+                src="/images/service-icon6.png"
                 className="service-clr-icon mb-4 mb-md-0 d-block mx-auto"
                 width={314}
                 height={356}
@@ -281,7 +282,7 @@ export default function Service() {
               data-aos-mirror="true"
             >
               <Image
-                src="/images/service-clr-icon5.png"
+                src="/images/service-icon4.png"
                 className="service-clr-icon mt-3 mt-md-0 d-block mx-auto"
                 width={331}
                 height={389}
@@ -301,7 +302,7 @@ export default function Service() {
               data-aos-mirror="true"
             >
               <Image
-                src="/images/service-clr-icon6.png"
+                src="/images/service-icon5.png"
                 className="service-clr-icon mb-4 mb-md-0 d-block mx-auto"
                 width={377}
                 height={379}
