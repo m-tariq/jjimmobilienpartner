@@ -72,12 +72,12 @@ export default function Purchase() {
                 Gewerbeimmobilien sind nicht unser primärer Fokus, werden aber
                 ebenfalls geprüft.
               </p>
-              <p className="font-inter fw-400 fs-5 mb-0 text-justify">
+              <p className="font-inter fw-400 fs-5 mb-3 text-justify">
                 <span className="font-inter fw-bold fs-5">Angebotspreis: </span>
                 Für ein erstes indikatives Kaufpreisangebot benötigen wir vorab
                 nur die wichtigsten Kerndaten der Immobilie.
               </p>
-              <p className="font-inter fw-400 fs-5 mb-0 text-justify">
+              <p className="font-inter fw-400 fs-5 mb-3 text-justify">
                 <span className="font-inter fw-bold fs-5">Abwicklung: </span>
                 Wir versprechen eine schnelle, seriöse, transparente und
                 diskrete Abwicklung. Eine Kaufentscheidung wird innerhalb kurzer

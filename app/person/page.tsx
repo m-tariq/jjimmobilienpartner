@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 // Removed unused Link import
 
 export default function About() {
@@ -11,9 +12,7 @@ export default function About() {
             Über mich
           </h4>
           <p className="text-white fs-md-5 fs-6 w-md-50 font-lato fw-normal">
-            Lorem Ipsum has been the industry&apos;s standard dummy text ever
-            since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book.
+            Mein Name ist Jan Jacobi, Gründer von JJ Immobilienpartner.
           </p>
         </div>
       </section>
@@ -39,10 +38,7 @@ export default function About() {
               <h4 className="font-poppins fw-600 display-6 mb-md-5 mb-3">
                 JJ Immobilienpartner
               </h4>
-              <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">
-                Mein Name ist Jan Jacobi, Gründer von Jan Jacobi
-                Immobilienpartner.
-              </p>
+
               <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">
                 Als gebürtiger Wuppertaler mit über 10 Jahren Erfahrung im
                 Immobiliengeschäft, habe ich mich auf den Aufbau und die
@@ -80,17 +76,24 @@ export default function About() {
                 den größtmöglichen Wert für meine Kunden zu schaffen.
               </p>
               <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">
+                Meine Leistungsübersicht und das Ankaufsprofil finden Sie auch
+                auf der Webseite.
+              </p>
+              <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">
                 Ich freue mich auf den Austausch und darauf, Sie bei Ihren
                 Immobilienprojekten zu unterstützen.
               </p>
-              <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">
-                Meine Leistungsübersicht und das Ankaufsprofil finden Sie hier:
-                +49 173 2725720
-              </p>
-              <p className="font-poppins fw-normal fs-6 mb-md-4 mb-3">
-                Kontaktieren können Sie mich gerne per Mail oder direkt hier:
-                info@jj-immobilienpartner.de
-              </p>
+              <Link
+                href="/contact-us"
+                className="text-decoration-none text-dark"
+              >
+                <button
+                  type="button"
+                  className="btn bg-black text-white px-3 rounded-pill mt-4 font-poppins fw-600"
+                >
+                  Kontakt
+                </button>
+              </Link>
             </div>
           </div>
         </div>
